@@ -10,9 +10,17 @@ h1{
 }
 
 /* HEADER */
+header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
 .nav-bar {
    
     border-bottom: 1px solid rgba(0, 0, 0, .05);
+   
     
 }
 
@@ -212,7 +220,7 @@ h1{
 /* footer */
 footer{
     padding: 50px 0;
-    background-color: black;
+    background-color: rgb(56, 55, 55);
     color: white;
 }
 .footer__main{
