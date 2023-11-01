@@ -1,0 +1,116 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.detail__slider {
+    height: 300px;
+    padding: 50px 0;
+    background: url(../img/Container.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+ .detail__slider .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+ .detail__content {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+}
+
+/* DETAIL__PRODUCT */
+
+.detail__text h2{
+    color: rgb(255, 208, 0);
+    font-weight: bold;
+    font-family: cursive;
+    padding-bottom: 1rem;
+}
+
+.detail__text-detail{
+    padding-top: 20px;
+    border-top: 1px dotted #d5d5d5;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.card_area button{
+    margin-top: 1rem;
+    background-color: #AB8D83;
+    color: white;
+    transition: all 0.25s ;
+}
+
+.card_area button:hover{
+    transform: translateY(-15%);
+}
+.product__count .quatity{
+   
+}
+
+.product__count button{
+    width: 25px;
+    height: 30px;
+    background: #AB8D83;
+    border: none;
+    font-size: 14px;
+    transition: all 0.3s linear 0s;
+    color: rgb(255, 255, 255);
+}
+
+/* SUB__DETAIL */
+
+.product_description_area .nav.nav-tabs{
+    color: black;
+    background-color: #FBEADF;
+}
+
+
+.product_description_area .nav .nav-link.active{
+    background-color: #AB8D83;
+    color: white;
+}
+
+.review_item {
+    margin-bottom: 15px;
+}
+
+.review_box{
+    padding: 2rem;
+    border: 1px solid #AB8D83;
+    border-radius: 5px;
+}
+
+.contact_form .form-group {
+    margin-bottom: 10px;
+}
+
+.contact_form .form-group .form-control {
+    font-size: 13px;
+    line-height: 26px;
+    color: #999;
+    border: 1px solid #eeeeee;
+    border-radius: 0px;
+    padding-left: 20px;
+    
+}

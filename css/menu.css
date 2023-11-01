@@ -71,11 +71,11 @@
     border-bottom: 1px solid #eee;
 }
 
-ul {
-    /* margin: 0;
-    padding: 0; */
-    /* list-style: none; */
-}
+/* ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} */
 
 .filter-bar {
     padding: 0px 20px 10px 20px;
@@ -164,8 +164,12 @@ a {
 
 .single-product .product-details .prd-bottom button{
     background-color: #AB8D83;
-    color: white;
+    
     transition: all 0.25s ;
+}
+
+.single-product .product-details .prd-bottom button a{
+    color: white;
 }
 
 .single-product .product-details .prd-bottom button:hover{
