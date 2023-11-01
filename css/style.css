@@ -211,6 +211,15 @@ header{
 }
 
 /* CONTACT */
+
+.contact__left{
+    background-image: url(../img/Rectangle\ 4520.png) ;
+    background-position: center;
+    padding: 4rem;
+    border-radius: 5%;
+    
+}
+
 .contact__right{
     background-color: #8582a1;
     border-radius: 5%;
