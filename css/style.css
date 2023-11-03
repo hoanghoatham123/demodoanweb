@@ -43,6 +43,11 @@ header{
     color: #FFFCF8;
 }
 
+.navbar .searchbox {
+  background-color: #f2f1fe; 
+  width: 30%;
+}
+
 /* SLIDER */
 
 .slider{
