@@ -56,9 +56,11 @@
 
             <a href="#" class="nav-item nav-link">Liên hệ</a>
           </div>
-          <div class="search nav-item">
-            <input type="text" value="" placeholder="Search for..." class="rounded-pill p-1" />
-            <i class="fa fa-search"></i>
+          <div class="searchbox px-4 py-2 search nav-item position-relative d-flex gap-2 rounded-pill border-0 align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.25em" stroke-width="1.5" stroke="#767494" class="opacity-25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            <input type="text" value="" placeholder="Search for..." class="border-0 px-2 bg-transparent flex-fill"/>
           </div>
         </div>
       </nav>
@@ -67,7 +69,7 @@
 
   <!-- SLIDER -->
   <div class="container-fluid">
-    <div class="slider text-center">
+    <div class="slider text-center d-relative">
       <div class="position-absolute top-50 start-50 translate-middle text-light">
         <h1>
           Tiệm bánh mặt trời nhỏ <br />
@@ -75,13 +77,14 @@
         </h1>
         <p>Không chỉ bánh ngọt, đây là sự yêu thương</p>
       </div>
-      <div class="background__bottom d-flex justify-content-evenly">
-        <div class="sanpham1">
-          <div class="circle1">
+      <div class="background__bottom d-flex justify-content-evenly"></div>
+      <div class="owl-carousel background_bottom d-flex justify-content-evenly">
+        <div class="sanpham">
+          <div id="circle_1" class="circle">
             <img src="img/banh2.png" alt="">
-            <div class="danhgia">
-              4.6 
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+            <div class="danh_gia">
+              <div>4.6</div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
             </div>
           </div>
           <div class="title_slider">
@@ -90,29 +93,29 @@
             </p>
           </div>
         </div>
-        <div class="sanpham2">
-          <div class="circle2">
+        <div class="sanpham">
+          <div id="circle_2" class="circle">
             <img src="img/banh3.png" alt="">
-            <div class="danhgia">
-              4.8 
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+            <div class="danh_gia">
+              <div>4.8</div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
             </div>
           </div>
-          <div class="title_slider2">
+          <div class="title_slider">
             <p> <span class="highlight_slider">Vũ trụ Bình minh</span> <br>
               Sự kết hợp giữa dâu tây cùng kem phô mai béo ngậy
             </p>
           </div>
         </div>
-        <div class="sanpham3">
-          <div class="circle3">
+        <div class="sanpham">
+          <div id="circle_3" class="circle">
             <img src="img/banh4.png" alt="">
-            <div class="danhgia">
-              4.9 
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
+            <div class="danh_gia">
+              <div>4.9</div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15t-.525-.2q-.225-.175-.35-.438t-.05-.587l1.1-4.725L3.775 11.8q-.25-.225-.312-.513t.037-.562q.1-.275.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15q.275 0 .537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45q.1.275.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437q-.225.175-.525.2t-.575-.15l-4.15-2.5Z"/></svg>
             </div>
           </div>
-          <div class="title_slider3">
+          <div class="title_slider">
             <p> <span class="highlight_slider">Vũ trụ Noel</span> <br>
               Các loại bánh quy Noel
             </p>
