@@ -18,10 +18,7 @@ header{
     background-color: white;
 }
 .nav-bar {
-   
     border-bottom: 1px solid rgba(0, 0, 0, .05);
-   
-    
 }
 
 .navbar .navbar-nav .nav-link {
@@ -169,11 +166,20 @@ header{
 }
 
 /* PRODUCT */
+.product{
+    background-color: #FBEADF;
+}
 .product .tab-class .nav-item a{
     text-decoration: none;
 }
+.bg-light {
+    background-color: #FEF7F3 !important;
+}
+.border-primary {
+    border-color: #F0A3A5!important;
+}
 .product .tab-class .nav-item a.active {
-    background: #9AB7D3 !important;
+    background: #F0A3A5 !important;
 }
 
 /* FEEDBACK */
