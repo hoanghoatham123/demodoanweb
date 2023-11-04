@@ -300,79 +300,67 @@ input:checked ~ .sale-tag {
 
 /* FEEDBACK */
 .feedback{
-    background-image: url(../img/Container.png);
     background-position: center;
     background-attachment: fixed;    
     background-size: cover;
-    color: #F5D2D3;
 }
-
-.feedback__content {
-    box-shadow: 0px 1px 7px #8e8e8e;
-    background-color: rgba(0, 0, 0, 0.47);
-    padding: 1rem;
+.bg-fb1{
+    width: 23.4rem;
+    height: 23.6rem;
+    background-image: url(/img/fb/fb1.png);
 }
-.feedback__content .item{
-    color: white;
-    padding: 1rem;
+.bg-fb2{
+    width: 23.4rem;
+    height: 23.6rem;
+    background-image: url(/img/fb/fb2.png);
 }
-
-.feedback__top::after{
-    content: '';
-    border-top: 9px solid rgba(0, 0, 0, 0.47);; 
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
+.bg-fb3{
+    width: 23.4rem;
+    height: 23.6rem;
+    background-image: url(/img/fb/fb3.png);
+}
+.bg-fb4{
+    width: 23.4rem;
+    height: 23.6rem;
+    background-image: url(/img/fb/fb4.png);
+}
+.fb-overlay{
     position: absolute;
-    top: 100%;
-    left: 28%;
+    width: 23.4rem;
+    height: 23.6rem;
+    background-color: white;
+    opacity: 45%;
 }
-
-.feedback__top{
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
-     background-color: rgba(0, 0, 0, 0.47);
-    position: relative;
+.fb{
+    position: absolute;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 17rem;
+    height: 18rem;
+    margin: 3rem;
 }
-
-
-.feedback__content .feedback__bottom img{
-    width: 28% ;
-    display: inline-block;
+.fb > p{
+    margin: 1.1rem;
 }
-
-.feedback__content .feedback__bottom{
+.review{
     display: flex;
-    justify-content: center;
-    width: 55%;
-    margin: 2rem auto 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
-
-.feedback__name p{
-    margin: 0;
-    color: #ff4f81;
+.review img{
+    width: 4.5rem !important;
 }
-.feedback__name{
-    margin-left: 5px;
+.review-name svg{
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #FFAD0F;
 }
-.feedback__name p:first-child{
-    font-size: 1.1rem;
+.review-name{
+    margin: 0 0.5rem;
     font-weight: bold;
-    color: white;
+    line-height: 2rem;
+    font-size: 14px;
 }
-
-.feedback__content .owl-theme .owl-dots .owl-dot span{
-    background-color: #ff4f81;
-    opacity: 0.5;
-}
-
-.feedback__content .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    opacity: 1;
-}
-
-.feedback__content .owl-theme .owl-dots .owl-dot:focus{
-    outline: none;
-}
-
 
 /* Team */
 .team-item {
