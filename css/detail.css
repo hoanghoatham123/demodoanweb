@@ -85,7 +85,7 @@
     background-color:#FEECEC;
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -120%;
     width: 35vw;
     max-height: 100%;
     overflow-y: scroll;
@@ -214,3 +214,34 @@
     padding-left: 20px;
     
 }
+
+/* RELATED PRODUCTS */
+.product-item {
+    position: relative;
+}
+
+.product-item img {
+    transition:all 0.5s;
+}
+
+.product-item:hover img {
+    transform: scale(1.3)
+}
+
+.product-item .product-content {
+    background-color:#AB8D83 ;
+    position: relative;
+    transform: translateY(-50%);
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.product-item .product-content .price {
+    color:#1E285F ;
+}
+
+.product-item .product-content .star{
+    color:#FFAD0F ;
+}
+
+
+
