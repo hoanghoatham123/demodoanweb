@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
 
     <!-- bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./css/style.css" />
@@ -126,7 +125,7 @@
                         </div>
                         <div class="card_area d-flex align-items-center">
                             <button class="btn " href="#">Mua ngay</button>
-                            <button class="icon_btn btn ms-3" href="#">Thêm vào giỏ <i
+                            <button class="icon_btn btn ms-3" href="#" id="cart">Thêm vào giỏ <i
                                     class="fa fa-shopping-bag"></i></button>
 
                         </div>
@@ -135,154 +134,261 @@
             </div>
         </div>
     </div>
-</body>
 
 
-<!-- SUB__DETAIL -->
-
-<section class="product_description_area">
-    <div class="container">
-        <ul class="nav nav-tabs my-3" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
-                    aria-selected="true">Chi tiết</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link active" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
-                    aria-controls="contact" aria-selected="false">Bình luận</a>
-            </li>
-
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quasi sapiente quas eveniet rem
-                    accusantium, aliquid aut quis quisquam culpa cumque numquam eligendi sed quidem fugit debitis.
-                    Soluta neque in temporibus ea nisi dignissimos deserunt. Et explicabo vel cumque consectetur aliquam
-                    itaque, dolorem, laborum dicta, nam harum error enim. Qui. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Suscipit aut praesentium quaerat eligendi ipsa, soluta ullam minus delectus id
-                    enim cum libero, vitae voluptatibus. Sequi impedit doloribus perspiciatis laudantium quas fuga odit
-                    facere et porro veniam natus recusandae cum, facilis necessitatibus obcaecati. Nemo tempora aliquam
-                    beatae inventore fuga dolores amet.
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Laboriosam ullam consequatur perferendis. Aspernatur, esse veniam sequi maxime fugiat unde placeat
-                    cupiditate repellendus ut earum ducimus sunt beatae asperiores, expedita culpa labore, nesciunt
-                    aliquid dolor blanditiis quibusdam itaque? Possimus dolorem saepe nam harum praesentium nemo ut
-                    dolor placeat libero rerum quaerat eos perferendis delectus error eum, sit dignissimos id doloribus,
-                    quo natus iusto repellendus asperiores provident? Quis quod culpa sequi facilis expedita et sit
-                    optio consequuntur illo laboriosam cumque quam temporibus consequatur reiciendis quae veniam maxime
-                    dolore, voluptatum magnam. Sequi, officia voluptas esse asperiores est alias a doloribus magni
-                    voluptatum cupiditate.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur beatae excepturi quisquam placeat,
-                    doloribus velit minima tempore sequi eaque eos neque non veritatis voluptatem quasi esse alias hic
-                    iusto ipsum ad iste labore voluptates. Iure a et nostrum laboriosam nihil atque eius eveniet laborum
-                    soluta, sint modi nemo quasi nam ratione nesciunt quam consequatur sed, doloribus aut explicabo quia
-                    illo ipsum? Eveniet omnis error, repellat voluptatem architecto sint dicta modi voluptas ullam
-                    soluta qui vitae minus assumenda, eaque sunt deleniti ut adipisci consequatur ea perferendis
-                    cupiditate! Quos illo incidunt non, unde aliquid nam dolor repudiandae sunt dicta sed pariatur
-                    nulla.</p>
+    <!-- MODAL ADD PRODUCT TO CART  -->
+    <div class="modal-cart" id="modal-cart">
+        <div class="container">
+            <div class="modal-head d-flex justify-content-between mt-3">
+                <h2 class="fst-normal">Giỏ hàng của bạn <span>(3)</span> </h2>
+                <i class="fa fa-times-circle" id="hidemodal"></i>
             </div>
 
-            <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="selection-item my-3">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="comment_list">
-                            <div class="review_item">
-                                <div class="media d-flex ">
-                                    <div class="me-3">
-                                        <img src="./img/user__comment.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="media-body mt-3">
-                                        <h4>Đậu Đậu</h4>
-                                        <h5>03/12/2023 - 05:56 pm</h5>
-
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea
-                                    commodo</p>
-                            </div>
-                            <div class="review_item">
-                                <div class="media d-flex">
-                                    <div class=" me-3">
-                                        <img src="./img/user__comment.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="media-body mt-3">
-                                        <h4>Đậu Đậu</h4>
-                                        <h5>03/12/2023 - 05:56 pm</h5>
-
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea
-                                    commodo</p>
-                            </div>
-                            <div class="review_item">
-                                <div class="media d-flex">
-                                    <div class="me-3">
-                                        <img src="./img/user__comment.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="media-body mt-3">
-                                        <h4>Đậu Đậu</h4>
-                                        <h5>03/12/2023 - 05:56 pm</h5>
-
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea
-                                    commodo</p>
-                            </div>
+                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image1.png" alt=""></div>
+                    <div class="col-9">
+                        <div class="item-info d-flex justify-content-between align-items-center">
+                            <h4>Vegan Chocolate Chip Cookie Dough</h4>
+                            <i class="fa fa-trash"></i>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="review_box">
-                            <h4>Gửi một bình luận</h4>
-                            <form class="row contact_form form-group" action="#">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Your Full name">
-                                    </div>
+                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                            <h4>$12.99</h4>
+                            <div class="form-group ">
+
+                                <div class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                    <i class="fa fa-minus"></i>
+                                    <input type="text" value="1" name="quantity" id="quantity"
+                                        class="text-center w-25 border-0">
+                                    <i class="fa fa-plus"></i>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="Email Address">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="number" name="number"
-                                            placeholder="Phone Number">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="message" id="message" rows="9"
-                                            placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" value="submit" class="btn btn-primary w-100">Gửi ngay</button>
-                                </div>
-                            </form>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="selection-item my-3">
+                <div class="row">
+                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image2.png" alt=""></div>
+                    <div class="col-9">
+                        <div class="item-info d-flex justify-content-between align-items-center">
+                            <h4>Vegan Chocolate Chip Cookie Dough</h4>
+                            <i class="fa fa-trash"></i>
+                        </div>
+                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                            <h4>$11.05</h4>
+                            <div class="form-group ">
+
+                                <div class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                    <i class="fa fa-minus"></i>
+                                    <input type="text" value="2" name="quantity" id="quantity"
+                                        class="text-center w-25 border-0">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy-together mt-3">
+                <h4 class="text-center">Thường được mua cùng với</h4>
+                <div class="selection-item">
+                    <div class="row">
+                        <div class="col-3"><img class="img-fluid" src="./img/mart/product-image3.png" alt=""></div>
+                        <div class="col-9">
+                            <div class="item-info d-flex justify-content-between align-items-center">
+                                <h4>Vegan Chocolate Chip Cookie Dough</h4>
+                                <i class="fa fa-trash"></i>
+                            </div>
+                            <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                                <h4>$12.99</h4>
+                                <button type="button" class="btn">Thêm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pay-total  my-3
+            p-3">
+                <div class="container total d-flex justify-content-between">
+                    <p>Tổng cộng</p>
+                    <p>$35.09</p>
+                </div>
+                <div class="pay d-flex justify-content-between">
+                    <button class="btn">Tiếp tục xem bánh</button>
+                    <button class="btn">Thanh toán</button>
+                </div>
+            </div>
+
+
         </div>
     </div>
-</section>
 
+
+    <!-- SUB__DETAIL -->
+
+    <section class="product_description_area">
+        <div class="container">
+            <ul class="nav nav-tabs my-3" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+                        aria-selected="true">Chi tiết</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+                        aria-controls="contact" aria-selected="false">Bình luận</a>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quasi sapiente quas eveniet rem
+                        accusantium, aliquid aut quis quisquam culpa cumque numquam eligendi sed quidem fugit debitis.
+                        Soluta neque in temporibus ea nisi dignissimos deserunt. Et explicabo vel cumque consectetur
+                        aliquam
+                        itaque, dolorem, laborum dicta, nam harum error enim. Qui. Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Suscipit aut praesentium quaerat eligendi ipsa, soluta ullam minus delectus id
+                        enim cum libero, vitae voluptatibus. Sequi impedit doloribus perspiciatis laudantium quas fuga
+                        odit
+                        facere et porro veniam natus recusandae cum, facilis necessitatibus obcaecati. Nemo tempora
+                        aliquam
+                        beatae inventore fuga dolores amet.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Laboriosam ullam consequatur perferendis. Aspernatur, esse veniam sequi maxime fugiat unde
+                        placeat
+                        cupiditate repellendus ut earum ducimus sunt beatae asperiores, expedita culpa labore, nesciunt
+                        aliquid dolor blanditiis quibusdam itaque? Possimus dolorem saepe nam harum praesentium nemo ut
+                        dolor placeat libero rerum quaerat eos perferendis delectus error eum, sit dignissimos id
+                        doloribus,
+                        quo natus iusto repellendus asperiores provident? Quis quod culpa sequi facilis expedita et sit
+                        optio consequuntur illo laboriosam cumque quam temporibus consequatur reiciendis quae veniam
+                        maxime
+                        dolore, voluptatum magnam. Sequi, officia voluptas esse asperiores est alias a doloribus magni
+                        voluptatum cupiditate.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur beatae excepturi quisquam
+                        placeat,
+                        doloribus velit minima tempore sequi eaque eos neque non veritatis voluptatem quasi esse alias
+                        hic
+                        iusto ipsum ad iste labore voluptates. Iure a et nostrum laboriosam nihil atque eius eveniet
+                        laborum
+                        soluta, sint modi nemo quasi nam ratione nesciunt quam consequatur sed, doloribus aut explicabo
+                        quia
+                        illo ipsum? Eveniet omnis error, repellat voluptatem architecto sint dicta modi voluptas ullam
+                        soluta qui vitae minus assumenda, eaque sunt deleniti ut adipisci consequatur ea perferendis
+                        cupiditate! Quos illo incidunt non, unde aliquid nam dolor repudiandae sunt dicta sed pariatur
+                        nulla.</p>
+                </div>
+
+                <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="comment_list">
+                                <div class="review_item">
+                                    <div class="media d-flex ">
+                                        <div class="me-3">
+                                            <img src="./img/detail/uer1.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="media-body mt-3">
+                                            <h4>Linh Ngọc</h4>
+                                            <h5>03/12/2023 - 05:56 pm</h5>
+
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea
+                                        commodo</p>
+                                </div>
+                                <div class="review_item">
+                                    <div class="media d-flex">
+                                        <div class=" me-3">
+                                            <img src="./img/detail/user2.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="media-body mt-3">
+                                            <h4>Nguyệt Hà</h4>
+                                            <h5>12/01/2023 - 05:56 pm</h5>
+
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea
+                                        commodo</p>
+                                </div>
+                                <div class="review_item">
+                                    <div class="media d-flex">
+                                        <div class="me-3">
+                                            <img src="./img/detail/user3.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="media-body mt-3">
+                                            <h4>Nguyễn Hưng</h4>
+                                            <h5>23/07/2023 - 05:56 pm</h5>
+
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea
+                                        commodo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="review_box">
+                                <h4>Gửi một bình luận</h4>
+                                <form class="row contact_form form-group" action="#">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Your Full name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="Email Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="number" name="number"
+                                                placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message" id="message" rows="9"
+                                                placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" value="submit" class="btn btn-primary w-100">Gửi
+                                            ngay</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
 <!-- bootstrap js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -290,5 +396,17 @@
 
 </html>
 <script>
+    let ShowModal = () => {
+        var modal = document.getElementById("modal-cart");
+        modal.classList.add("show");
+    }
+
+    let hidemodal = () => {
+        var modal = document.getElementById("modal-cart");
+        modal.classList.remove("show");
+    }
+    document.getElementById("cart").addEventListener("click", ShowModal);
+    document.getElementById("hidemodal").addEventListener("click", hidemodal);
+
 
 </script>
