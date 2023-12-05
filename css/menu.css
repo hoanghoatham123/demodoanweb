@@ -1,6 +1,6 @@
 /* BANNER */
 .banner{
-    width: 100vw;
+    /* width: 100vw; */
     height: auto;
     background-color:#FBEADF ;
 }
@@ -135,6 +135,11 @@ a {
 .single-product img {
     margin-bottom: 20px;
     width: 100%;
+    transition: all 0.5s;
+}
+
+.single-product:hover img{
+    transform: scale(1.2);
 }
 
 .single-product .product-details .price h6 {
