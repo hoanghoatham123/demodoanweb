@@ -444,7 +444,7 @@ input:checked ~ .sale-tag {
 .contact__right{
     background-color: #FBEADF;
     border-radius: 8px;
-    height: 28rem;
+    min-height: 28rem;
 }
 
 .contact__right label{
@@ -502,9 +502,6 @@ footer{
 }
 
 @media screen and (max-width:768px) {
-    footer{
-        margin-top: 7rem;
-    }
     
     .responsive{
         display: none;
@@ -512,7 +509,17 @@ footer{
 
     .footer_bottom .col-lg-3 {
         height: 10rem;
-        margin-left: 1rem;
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+
+    .footer-icon{
+        justify-content: center !important;
+    }
+
+     .footer-contact{
+        text-align: center !important;
     }
 }
 
