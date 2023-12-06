@@ -41,19 +41,19 @@ header{
 }
 
 .navbar .searchbox {
-  background-color: #f2f1fe; 
-  width: 30%;
+    background-color: #f2f1fe; 
+    width: 30%;
 }
 
 /* SLIDER */
 
 .slider{
-    background-image: url(../img/Container.png);
+    background-image: url(../img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 934px;
+    height: 960px;
     position: relative;
 }
 
@@ -73,38 +73,89 @@ header{
 .background_bottom {
     width: 80%;
     padding: 10px;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
+.slide {
+    width: fit-content;
+    width: -moz-fit-content;
+    position: relative;
+    translate: -50% 15%;
+}
+.slider-bg{
+    width: 80%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #b07d62;
+    border-radius: 100em;
+}
+.slide-circles{
+    width: 48rem;
+    height: 48rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    animation-name: xoay-cha;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.slide-circles .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: xoay-con;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.item > img{
+    width: 100%;
+    height: 100%;
+}
 .circle {
-    height: 237px;
-    width: 237px;
+    height: 360px;
+    width: 360px;
     position: relative;
     display: inline-block;
     border-radius: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #circle_1 {
     background-color: #F4CC88;
 }
 #circle_2 {
-    background-color: #93C9A6;
+    background-color: #93C9A6 ;
 }
 #circle_3 {
     background-color: #EA7687;
 }
+#circle_4 {
+    background-color:#faa275;
+}
 .circle img {
     aspect-ratio: 1/1;
+    margin: auto;
 }
 #circle_1 img {
-    height: 221px;
+    height: 370px;
 }
 #circle_2 img {
-    height: 243px;
+    height: 370px;
 }
 #circle_3 img {
-    height: 221px;
+    height: 310px;
+}
+#circle_4 img {
+    height: 340px;
 }
 .title_slider{
     margin-top: 1.5em;
@@ -120,8 +171,8 @@ header{
 }
 .danh_gia{
     padding: 4px 8px;
-    height: 35px;
-    width: 60px;
+    height: 54px;
+    width: 80px;
     position: absolute;
     bottom: 20%;
     right: -5%;
@@ -131,12 +182,77 @@ header{
     background-color: #ffffff;
     border-radius: 4px;
     gap: 0.25em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    
 }
 .danh_gia svg{
     color: #FFAD0F;
     width: 2em;
+}
+.danh_gia div {
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+.slide-content{
+    /* width: 55rem;
+    height: 30rem; */
+    width: 45vw;
+    height: 50vh;
+
+    position: absolute;
+    bottom: 25vh;
+    left: 50vw;
+    text-align: start;
+    display: flex;
+    flex-direction: column-reverse;
+    /* overflow-y: hidden; */
+}
+
+.slide-title{
+
+    width: 45vw;
+    height: 50vh;
+    /* flex-shrink: 0; */
+    position: absolute;
+    /* margin-bottom: 17rem; */
+    /* animation-name: chuyen;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; */
+}
+
+.slide-title#slide-t1{
+    animation-name: chuyen1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.slide-title#slide-t2{
+    animation-name: chuyen2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.slide-title#slide-t3{
+    animation-name: chuyen3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.slide-title#slide-t4{
+    animation-name: chuyen4;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.slide-title > h1 {
+    width: 24rem;
+    height: 3rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    background-color: #b07d62 ;
+    color: #fff;
+}
+
+.slide-title > p {
+    text-align: justify;
 }
 
 @media only screen and (max-width: 768px) {
@@ -144,6 +260,103 @@ header{
         margin: 0 auto;
         max-width: 80%;
     }
+}
+@keyframes xoay-cha{
+
+    0%   { transform: rotate(-45deg); }
+
+    4%  { transform: rotate(45deg); }
+    23%  { transform: rotate(45deg); }
+
+    29%  { transform: rotate(135deg); }
+    48%  { transform: rotate(135deg); }
+
+    54%  { transform: rotate(225deg); }
+    73%  { transform: rotate(225deg); }
+
+    79%  { transform: rotate(315deg); }
+    98%  { transform: rotate(315deg); }
+
+    100%  { transform: rotate(315deg); }
+}
+
+@keyframes xoay-con{
+
+    0%   { transform: rotate(45deg); }
+
+    4%  { transform: rotate(-45deg); }
+    23%  { transform: rotate(-45deg); }
+
+    29%  { transform: rotate(-135deg); }
+    48%  { transform: rotate(-135deg); }
+
+    54%  { transform: rotate(-225deg); }
+    73%  { transform: rotate(-225deg); }
+
+    79%  { transform: rotate(-315deg); }
+    98%  { transform: rotate(-315deg); }
+
+    100%  { transform: rotate(-315deg); }
+}
+
+
+@keyframes chuyen1{
+    0% {opacity: 0; top: -10%;}
+    2% {opacity: 1;top: 0;}
+
+    23% {opacity: 1;top: 0;}
+    25% {opacity: 0; top: 10%;}
+
+    100% {opacity: 0; top:-10%;}
+}
+
+@keyframes chuyen2{
+    0% {opacity: 0; top: -10%;}
+    
+    25% {opacity: 0; top: -10%;}
+    27% {opacity: 1; top: 0;}
+    
+    48% {opacity: 1; top: 0;}
+    50% {opacity: 0; top: 10%;}
+
+    100% {opacity: 0; top:-10%;}
+}
+
+@keyframes chuyen3{
+    0% {opacity: 0; top: -10%;}
+    
+    50% {opacity: 0; top: -10%;}
+    52% {opacity: 1; top: 0;}
+    
+    73% {opacity: 1; top: 0;}
+    75% {opacity: 0; top: 10%;}
+
+    100% {opacity: 0; top:-10%;}
+}
+@keyframes chuyen4{
+    0% {opacity: 0; top: -10%;}
+    
+    75% {opacity: 0; top: -10%;}
+    77% {opacity: 1; top: 0;}
+    
+    98% {opacity: 1; top: 0;}
+    100% {opacity: 0; top: 10%;}
+}
+
+@keyframes chuyen {
+    0% {transform: translateY(0rem);}
+    20% {transform: translateY(0rem);}
+
+    25% {transform: translateY(calc(1*50vh));}
+    45% {transform: translateY(calc(1*50vh));}
+
+    50% {transform: translateY(calc(2*50vh));}
+    70% {transform: translateY(calc(2*50vh));}
+
+    75% {transform: translateY(calc(3*50vh));}
+    95% {transform: translateY(calc(3*50vh));}
+
+    100% {transform: translateY(calc(4*50vh));}   
 }
 
 /* ABOUT */
