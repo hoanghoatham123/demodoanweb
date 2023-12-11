@@ -122,7 +122,7 @@
                         </div>
                         <div class="card_area d-flex align-items-center">
                             <button class="btn " href="#">Mua ngay</button>
-                            <button class="icon_btn btn ms-3" href="#" id="cart">Thêm vào giỏ <i
+                            <button class="icon_btn btn ms-3" href="#" id="cart" onclick="ShowModal()">Thêm vào giỏ <i
                                     class="fa fa-shopping-bag"></i></button>
 
                         </div>
@@ -138,7 +138,7 @@
         <div class="container">
             <div class="modal-head d-flex justify-content-between mt-3">
                 <h2 class="fst-normal">Giỏ hàng của bạn <span>(3)</span> </h2>
-                <i class="fa fa-times-circle" id="hidemodal"></i>
+                <i class="fa fa-times-circle" onclick="HideModal()"></i>
             </div>
 
             <div class="selection-item my-3">
@@ -219,8 +219,8 @@
                     <p>$35.09</p>
                 </div>
                 <div class="pay d-flex justify-content-between">
-                    <button class="btn">Tiếp tục xem bánh</button>
-                    <button class="btn">Thanh toán</button>
+                    <button class="btn" onclick="HideModal()">Tiếp tục xem bánh</button>
+                    <button class="btn"><a href="./pay_info.html" class="text-dark">Thanh toán</a></button>
                 </div>
             </div>
 
@@ -581,13 +581,12 @@
         modal.classList.add("show");
     }
 
-    let hidemodal = () => {
+    let HideModal = () => {
         var modal = document.getElementById("modal-cart");
         modal.classList.remove("show");
     }
-    document.getElementById("cart").addEventListener("click", ShowModal);
-    document.getElementById("hidemodal").addEventListener("click", hidemodal);
-
+    // document.getElementById("cart").addEventListener("click", ShowModal);
+    // document.getElementById("hidemodal").addEventListener("click", hidemodal);
 
 </script>
 
