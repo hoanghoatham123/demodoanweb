@@ -111,15 +111,12 @@
                         <div class="product__count form-group">
                             <label for="soluong">Số lượng :</label>
                             <div class="quantity d-flex align-items-center mt-2">
-                                <button type="button"
-                                    onclick="var result = document.getElementById('quantity'); var sst = result.value;  result.value--;return false;"
-                                    class="down">
+                                <button type="button" onclick="down()" class="down">
                                     <i class="fa fa-caret-left"></i></button>
                                 <input type="text" value="1" name="quantity" id="quantity"
                                     class="text-center w-25 border-0">
-                                <button type="button"
-                                    onclick="var result = document.getElementById('quantity'); var sst = result.value;  result.value++;return false;"
-                                    class="up"><i class="fa fa-caret-right"></i></button>
+                                <button type="button" onclick="up()" class="up"><i
+                                        class="fa fa-caret-right"></i></button>
                             </div>
 
                         </div>
@@ -159,7 +156,7 @@
                                 <div class="quantity d-flex align-items-center mt-0 justify-content-between">
 
                                     <i class="fa fa-minus"></i>
-                                    <input type="text" value="1" name="quantity" id="quantity"
+                                    <input type="text" value="1" name="quantity" id=""
                                         class="text-center w-25 border-0">
                                     <i class="fa fa-plus"></i>
                                 </div>
@@ -185,7 +182,7 @@
                                 <div class="quantity d-flex align-items-center mt-0 justify-content-between">
 
                                     <i class="fa fa-minus"></i>
-                                    <input type="text" value="2" name="quantity" id="quantity"
+                                    <input type="text" value="2" name="quantity" id=""
                                         class="text-center w-25 border-0">
                                     <i class="fa fa-plus"></i>
                                 </div>
@@ -432,7 +429,7 @@
                         <div class="product-content mx-4 d-flex rounded">
 
                             <div class=" p-3 text-center">
-                                <h4>Bánh kem nho</h4>
+                                <h4>Bánh kem dâu</h4>
                                 <h4 class="price">$99.99</h4>
                                 <div class="star d-flex justify-content-center">
                                     <i class="fa fa-star"></i>
@@ -453,12 +450,12 @@
                 <div class="">
                     <div class="product-item">
                         <div class="overflow-hidden rounded">
-                            <img src="./img/detail/product-type1.png" class="img-fluid w-100" alt="" />
+                            <img src="./img/detail/product-type3.png" class="img-fluid w-100" alt="" />
                         </div>
                         <div class="product-content mx-4 d-flex rounded">
 
                             <div class="p-3 text-center">
-                                <h4>Bánh kem thập cẩm</h4>
+                                <h4>Bánh kem nho</h4>
                                 <h4 class="price">$35.09</h4>
                                 <div class="star d-flex justify-content-center">
                                     <i class="fa fa-star"></i>
@@ -545,8 +542,6 @@
 <!-- owljs -->
 <script src="./js/owl.carousel.min.js"></script>
 
-
-</html>
 <script>
     //owl carousel
     $(".owl-carousel").owlCarousel({
@@ -569,7 +564,18 @@
         },
     });
 
-    // show modal mart
+    //count quantity
+    let down = () => {
+        var result = document.getElementById('quantity');
+        result.value > 0 ? result.value-- : false;
+    }
+
+    let up = () => {
+        var result = document.getElementById('quantity');
+        result.value++;
+        return false;
+    }
+    // show & hide modal mart
     let ShowModal = () => {
         var modal = document.getElementById("modal-cart");
         modal.classList.add("show");
@@ -584,3 +590,5 @@
 
 
 </script>
+
+</html>
