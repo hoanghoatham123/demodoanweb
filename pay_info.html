@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="./img/about.png" />
+    <title>Thông tin thanh toán</title>
+    <!-- font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap"
+        rel="stylesheet" />
+
+    <!-- font awesome -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <!-- owlcss -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+
+    <!-- bootstrap css-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/pay_info.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="container-fluid position-static">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg py-4">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-primary mb-0">
+                        Ca<span class="text-dark">ke</span>
+                    </h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link">About</a>
+                        <a href="#" class="nav-item nav-link">Collection</a>
+                        <a href="#" class="nav-item nav-link">Teams</a>
+
+                        <div class="nav-item dropdown">
+                            <a href="menu.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
+                            <div class="dropdown-menu bg-light">
+                                <a href="menu.html" class="dropdown-item">banh ngot</a>
+                                <a href="menu.html" class="dropdown-item">banh sinh nhat</a>
+                                <a href="menu.html" class="dropdown-item">banh man</a>
+                                <a href="menu.html" class="dropdown-item">banh mini</a>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div
+                        class="searchbox px-4 py-2 search nav-item position-relative d-flex gap-2 rounded-pill border-0 align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="1.25em"
+                            stroke-width="1.5" stroke="#767494" class="opacity-25">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                        <input type="text" value="" placeholder="Search for..."
+                            class="border-0 px-2 bg-transparent flex-fill" />
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FREESHIP -->
+    <div class="freeship container-fluid py-2">
+        <div class="container text-center text-light fw-bold">
+            <p class="mb-0">Free Ship Cho Đơn Hàng Trên 500,000đ</p>
+        </div>
+    </div>
+
+    <div class="link container-fluid py-2">
+        <div class="container text-center text-dark fw-bold">
+            <p class="mb-0"><span>Giỏ hàng </span> <strong class="mx-2">></strong> Thanh toán</p>
+        </div>
+    </div>
+
+    <!-- PAY INFO -->
+    <div class="pay-info container-fluid">
+        <div class="container">
+            <div class="row text-dark fw-bold">
+                <div class="left col-lg-7">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between">
+                            <label for="">Thông tin liên hệ</label>
+                            <p>Đã có tài khoản ? <span class="text-danger">Đăng nhập</span></p>
+                        </div>
+                        <div class="col-12">
+                            <input type="email" placeholder="Email" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-12 mt-5">
+                            <label for="">Địa chỉ giao hàng</label>
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <input type="text" placeholder="Tên" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <input type="text" placeholder="Họ" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-12 my-3">
+                            <input type="text" placeholder="Địa chỉ giao hàng" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-6">
+                            <input type="text" placeholder="Thành phố" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-6">
+                            <input type="text" placeholder="Mã vùng" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-12 my-3">
+                            <input type="tel" placeholder="Số điện thoại" class="form-control border-dark py-2">
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <label for="">Thông tin thanh toán</label>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between my-3">
+                            <div class="method fw-light">
+                                <input type="radio" name="method" id="">
+                                <label for="" class="d-inline">Net Banking</label>
+                            </div>
+                            <div class="method">
+                                <input type="radio" name="method" id="" checked>
+                                <label for="" class="d-inline">Credit/Debit card</label>
+                            </div>
+                            <div class="method fw-light">
+                                <input type="radio" name="method" id="">
+                                <label for="" class="d-inline">Ship COD</label>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="method-info fw-light p-3 rounded">
+                                <img src="./img/pay_info/visa.png" alt="" class="figure-img">
+                                <p class="fw-bold">**** **** **** 0981</p>
+                                <p>Hết hạn 10-19</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="method-info fw-light p-3 rounded">
+                                <img src="./img/pay_info/master-card.png" alt="" class="figure-img">
+                                <p class="fw-bold">**** **** **** 2564</p>
+                                <p>Hết hạn 10-19</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div
+                                class="method-info fw-light p-3 rounded text-center h-100 d-flex flex-column justify-content-center">
+                                <i class="fa fa-plus-circle"></i>
+                                <p class="mb-0">Thêm thẻ thanh toán</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center my-5">
+                            <button class="btn btn-warning rounded-pill px-5 border-dark">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right col-lg-5">
+                    <div class="container py-3">
+                        <div class="modal-head d-flex justify-content-between mt-3">
+                            <h2 class="fst-normal">Giỏ hàng của bạn <span class="text-danger">(3)</span> </h2>
+                            <i class="fa fa-times-circle" id="hidemodal"></i>
+                        </div>
+
+                        <div class="selection-item my-3">
+                            <div class="row">
+                                <div class="col-3"><img class="img-fluid" src="./img/mart/product-image1.png" alt="">
+                                </div>
+                                <div class="col-9">
+                                    <div class="item-info d-flex justify-content-between align-items-center">
+                                        <h4>Vegan Chocolate Chip Cookie Dough</h4>
+                                        <i class="fa fa-trash"></i>
+                                    </div>
+                                    <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                                        <h4>$12.99</h4>
+                                        <div class="form-group ">
+
+                                            <div
+                                                class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                                <i class="fa fa-minus"></i>
+                                                <input type="text" value="1" name="quantity" id=""
+                                                    class="text-center w-25 border-0">
+                                                <i class="fa fa-plus"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="selection-item my-3">
+                            <div class="row">
+                                <div class="col-3"><img class="img-fluid" src="./img/mart/product-image2.png" alt="">
+                                </div>
+                                <div class="col-9">
+                                    <div class="item-info d-flex justify-content-between align-items-center">
+                                        <h4>Vegan Chocolate Chip Cookie Dough</h4>
+                                        <i class="fa fa-trash"></i>
+                                    </div>
+                                    <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                                        <h4>$11.05</h4>
+                                        <div class="form-group ">
+
+                                            <div
+                                                class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                                <i class="fa fa-minus"></i>
+                                                <input type="text" value="2" name="quantity" id=""
+                                                    class="text-center w-25 border-0">
+                                                <i class="fa fa-plus"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discount-code selection-item mt-3">
+                            <div class="d-flex">
+                                <input type="text" placeholder="Mã giảm giá" class="form-control border-dark w-75 me-2">
+                                <button class="btn btn-primary bg-warning rounded-pill border-dark">Áp mã</button>
+                            </div>
+                        </div>
+
+                        <div class="total selection-item mt-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Tạm tính</span>
+                                <span>$35.09</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Phí ship</span>
+                                <span>$10.99</span>
+                            </div>
+                        </div>
+
+                        <div class="pay-total  my-3">
+                            <div class="container total d-flex justify-content-between px-0">
+                                <p>Tổng cộng</p>
+                                <p>$46.08</p>
+                            </div>
+
+                            <div class="pay text-center">
+                                <p>
+                                    <span><i class="fa fa-angle-left"></i> </span>
+                                    Trở về giỏ hàng
+                                </p>
+                                <button class="btn"> <a href="./menu.html" class="text-dark">Tiếp tục mua hàng</a>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+
+        <div class="footer_top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 193" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1440 136.886L1380 119.8C1320 102.715 1200 68.5431 1080 51.4573C960 34.3716 840 34.3716 720 68.5431C600 102.715 480 171.058 360 188.143C240 205.229 120 171.058 60 153.972L0 136.886V0.200043H60C120 0.200043 240 0.200043 360 0.200043C480 0.200043 600 0.200043 720 0.200043C840 0.200043 960 0.200043 1080 0.200043C1200 0.200043 1320 0.200043 1380 0.200043H1440V136.886Z"
+                    fill="#FFF7F4" />
+            </svg>
+        </div>
+        <div class="footer_bottom">
+            <div class="row w-100">
+                <div class="col-lg-5  responsive">
+
+                    <img src="./img/logo/logo-mau.png" alt="" />
+
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="content-top">
+                        <p>Subscribe to the newsletter and be aware of promotions</p>
+                        <div class="subscribe d-flex justify-content-between">
+                            <input type="text" placeholder="Email">
+                            <button class="btn btn-primary rounded-pill px-5">
+                                Gửi
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="text-bottom responsive">
+                        2023 ©Macaronsmania. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-lg-4  col-md-12 px-0 ">
+
+                    <div class="footer-icon d-flex justify-content-end">
+                        <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+
+                        <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-contact text-end me-3">
+                        <h2>Liên hệ</h2>
+                        <p class="mb-0">+123456789 <br>
+                            pastryshop@gmail.com</p>
+                        <h2>Thời gian hoạt động</h2>
+                        <p>T2-CN từ 09:00 đến 20:00</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+<!-- bootstrap js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- owljs -->
+<script src="./js/owl.carousel.min.js"></script>
+
+<script>
+    //owl carousel
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 3,
+            },
+        },
+    });
+
+
+    // show & hide modal mart
+    let ShowModal = () => {
+        var modal = document.getElementById("modal-cart");
+        modal.classList.add("show");
+    }
+
+    let hidemodal = () => {
+        var modal = document.getElementById("modal-cart");
+        modal.classList.remove("show");
+    }
+    // document.getElementById("cart").addEventListener("click", ShowModal);
+    // document.getElementById("hidemodal").addEventListener("click", hidemodal);
+
+
+</script>
+
+</html>

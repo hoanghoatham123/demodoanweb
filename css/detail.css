@@ -123,6 +123,11 @@
     /* margin-bottom: 4rem; */
 }
 
+.modal-cart .row input,.modal-cart .pay button:first-child
+{
+    background: none;
+}
+
 .modal-cart .item-pay .quantity{
     border: 2px solid black;
     padding: 3% 6%;

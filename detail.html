@@ -111,21 +111,18 @@
                         <div class="product__count form-group">
                             <label for="soluong">Số lượng :</label>
                             <div class="quantity d-flex align-items-center mt-2">
-                                <button type="button"
-                                    onclick="var result = document.getElementById('quantity'); var sst = result.value;  result.value--;return false;"
-                                    class="down">
+                                <button type="button" onclick="down()" class="down">
                                     <i class="fa fa-caret-left"></i></button>
                                 <input type="text" value="1" name="quantity" id="quantity"
                                     class="text-center w-25 border-0">
-                                <button type="button"
-                                    onclick="var result = document.getElementById('quantity'); var sst = result.value;  result.value++;return false;"
-                                    class="up"><i class="fa fa-caret-right"></i></button>
+                                <button type="button" onclick="up()" class="up"><i
+                                        class="fa fa-caret-right"></i></button>
                             </div>
 
                         </div>
                         <div class="card_area d-flex align-items-center">
                             <button class="btn " href="#">Mua ngay</button>
-                            <button class="icon_btn btn ms-3" href="#" id="cart">Thêm vào giỏ <i
+                            <button class="icon_btn btn ms-3" href="#" id="cart" onclick="ShowModal()">Thêm vào giỏ <i
                                     class="fa fa-shopping-bag"></i></button>
 
                         </div>
@@ -141,7 +138,7 @@
         <div class="container">
             <div class="modal-head d-flex justify-content-between mt-3">
                 <h2 class="fst-normal">Giỏ hàng của bạn <span>(3)</span> </h2>
-                <i class="fa fa-times-circle" id="hidemodal"></i>
+                <i class="fa fa-times-circle" onclick="HideModal()"></i>
             </div>
 
             <div class="selection-item my-3">
@@ -159,7 +156,7 @@
                                 <div class="quantity d-flex align-items-center mt-0 justify-content-between">
 
                                     <i class="fa fa-minus"></i>
-                                    <input type="text" value="1" name="quantity" id="quantity"
+                                    <input type="text" value="1" name="quantity" id=""
                                         class="text-center w-25 border-0">
                                     <i class="fa fa-plus"></i>
                                 </div>
@@ -185,7 +182,7 @@
                                 <div class="quantity d-flex align-items-center mt-0 justify-content-between">
 
                                     <i class="fa fa-minus"></i>
-                                    <input type="text" value="2" name="quantity" id="quantity"
+                                    <input type="text" value="2" name="quantity" id=""
                                         class="text-center w-25 border-0">
                                     <i class="fa fa-plus"></i>
                                 </div>
@@ -222,8 +219,8 @@
                     <p>$35.09</p>
                 </div>
                 <div class="pay d-flex justify-content-between">
-                    <button class="btn">Tiếp tục xem bánh</button>
-                    <button class="btn">Thanh toán</button>
+                    <button class="btn" onclick="HideModal()">Tiếp tục xem bánh</button>
+                    <button class="btn"><a href="./pay_info.html" class="text-dark">Thanh toán</a></button>
                 </div>
             </div>
 
@@ -432,7 +429,7 @@
                         <div class="product-content mx-4 d-flex rounded">
 
                             <div class=" p-3 text-center">
-                                <h4>Bánh kem nho</h4>
+                                <h4>Bánh kem dâu</h4>
                                 <h4 class="price">$99.99</h4>
                                 <div class="star d-flex justify-content-center">
                                     <i class="fa fa-star"></i>
@@ -453,12 +450,12 @@
                 <div class="">
                     <div class="product-item">
                         <div class="overflow-hidden rounded">
-                            <img src="./img/detail/product-type1.png" class="img-fluid w-100" alt="" />
+                            <img src="./img/detail/product-type3.png" class="img-fluid w-100" alt="" />
                         </div>
                         <div class="product-content mx-4 d-flex rounded">
 
                             <div class="p-3 text-center">
-                                <h4>Bánh kem thập cẩm</h4>
+                                <h4>Bánh kem nho</h4>
                                 <h4 class="price">$35.09</h4>
                                 <div class="star d-flex justify-content-center">
                                     <i class="fa fa-star"></i>
@@ -545,8 +542,6 @@
 <!-- owljs -->
 <script src="./js/owl.carousel.min.js"></script>
 
-
-</html>
 <script>
     //owl carousel
     $(".owl-carousel").owlCarousel({
@@ -569,18 +564,30 @@
         },
     });
 
-    // show modal mart
+    //count quantity
+    let down = () => {
+        var result = document.getElementById('quantity');
+        result.value > 0 ? result.value-- : false;
+    }
+
+    let up = () => {
+        var result = document.getElementById('quantity');
+        result.value++;
+        return false;
+    }
+    // show & hide modal mart
     let ShowModal = () => {
         var modal = document.getElementById("modal-cart");
         modal.classList.add("show");
     }
 
-    let hidemodal = () => {
+    let HideModal = () => {
         var modal = document.getElementById("modal-cart");
         modal.classList.remove("show");
     }
-    document.getElementById("cart").addEventListener("click", ShowModal);
-    document.getElementById("hidemodal").addEventListener("click", hidemodal);
-
+    // document.getElementById("cart").addEventListener("click", ShowModal);
+    // document.getElementById("hidemodal").addEventListener("click", hidemodal);
 
 </script>
+
+</html>

@@ -1,0 +1,93 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* FREESHIP */
+
+.freeship{
+    background-color: #AB8D83;
+}
+
+.link span{
+    color: #AB8D83;
+}
+
+/* PAY INFO */
+
+.pay-info .method-info{
+    background-color: #FEECEC;
+    box-shadow: 0px 5px 7px 0 rgb(187, 187, 187);
+}
+
+
+.pay-info .right >.container{
+    background-color:#FEECEC;
+    
+}
+
+.pay-info .right h2{
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.pay-info h4{
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pay-info .modal-head i{
+    font-size: 2rem;
+    color: #F45757;
+}
+
+.pay-info i{
+    font-size: 120%;
+    color: black;
+}
+
+
+.pay-info .selection-item{
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    /* margin-bottom: 4rem; */
+}
+
+.pay-info .row input,.pay-info .pay button:first-child
+{
+    background: none;
+}
+
+.pay-info .item-pay .quantity{
+    border: 2px solid black;
+    padding: 3% 6%;
+    border-radius: 2rem;
+    width: 10rem;
+}
+
+.pay-info .buy-together{
+    border-radius: 0.5rem;
+    background-color: #FEF5F5;
+}
+
+.pay-info .pay i{
+    color: #F45757;
+    font-size: 1rem;
+}
+
+.pay-info .pay .btn{
+    font-weight: bold;
+    color: black;
+    padding: 2% 4%;
+    border-radius: 2rem;
+    border: 1px solid #353535;
+    background-color: #F45757;
+}
+
