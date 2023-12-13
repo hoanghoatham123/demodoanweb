@@ -2,7 +2,15 @@
 .banner{
     /* width: 100vw; */
     height: auto;
-    background-color:#FBEADF ;
+    background: url(../img/texture.png), lightgray 50% / cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgb(255, 203, 172);
+    
+}
+
+.banner .container img{
+    border-radius: 20px;
+    box-shadow: 10px 13px 15px 0px rgba(0, 0, 0, 0.25);
 }
 
 .banner__right .anhde{
@@ -12,6 +20,8 @@
     transform: translateY(5%);
     top: 5%;
 }
+
+
 
 /* MENU */
 
@@ -39,10 +49,11 @@
     transition: all 0.25s;
 }
 
-.sidebar-categories .main-nav-list a:hover, .sidebar-categories .main-nav-list a:focus{
+.sidebar-categories .main-nav-list a:hover, .sidebar-categories .main-nav-list a:focus,.sidebar-categories .main-nav-list::marker{
     color: #AB8D83;
    
 }
+
 
 .main-categories a {
     color: #000;
