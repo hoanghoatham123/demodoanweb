@@ -53,7 +53,7 @@ header{
 
 .navbar .searchbox {
   background-color: #e3e3e5;
-  width: 30%;
+  /* width: 30%; */
 }
 
 input{
@@ -123,11 +123,15 @@ input{
 }
 .title_slider{
     margin-top: 1.5em;
-    color: #e3d5ca;
+    color: #e3d5ca ;
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
     font-size: 15px;
 }
+.title_slider p{
+    color: #e3d5ca ;
+}
+
 .highlight_slider{
     color: white;
     font-size: 20px;
@@ -154,11 +158,21 @@ input{
     width: 2em;
 }
 
+.slider .slider-description{
+    color: #FEDADB;
+}
+
 @media only screen and (max-width: 768px) {
     .sanpham {
         margin: 0 auto;
         max-width: 80%;
     }
+
+    .slider .slider-description{
+        display: none;
+    }
+
+
 }
 
 /* ABOUT */
@@ -267,16 +281,16 @@ input:checked + label .description{
     transform: translateY(0) !important;
 }
 .card[for="c1"]{
-    background-image: url(/img/best/fb2.jpg);   
+    background-image: url(../img/best/fb2.jpg);   
 }
 .card[for="c2"]{
-    background-image: url(/img/best/fb3.jpg);   
+    background-image: url(../img/best/fb3.jpg);   
 }
 .card[for="c3"]{
-    background-image: url(/img/best/fb4.jpg);   
+    background-image: url(../img/best/fb4.jpg);   
 }
 .card[for="c4"]{
-    background-image: url(/img/best/fb5.jpg);   
+    background-image: url(../img/best/fb5.jpg);   
 }
 input:checked ~ .sale-tag {
     opacity: 1;
