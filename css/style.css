@@ -5,8 +5,18 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+
 h1{
     font-family: 'Playball', cursive;
+}
+
+p{
+    color: black;
+}
+
+button {
+    background-color: #AB8D83 ;
+    color: white ;
 }
 
 /* HEADER */
@@ -17,6 +27,7 @@ header{
     left: 0;
     background-color: white;
 }
+
 .nav-bar {
     border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
