@@ -19,6 +19,24 @@ button {
     color: white ;
 }
 
+.text-content{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    color: #6F7CB2;
+}
+
+@media only screen and (max-width: 768px) {
+    .text-content{
+        width: 90%;
+    }
+    
+
+
+}
+
+
+
 /* HEADER */
 header{
     position: fixed;
@@ -453,26 +471,6 @@ input:checked ~ .sale-tag {
     font-size: 14px;
 }
 
-/* Team */
-
-.team{
-    background-color: #FAE6E7;
-}
-
-.team .team-item{
-    width: 100%;
-    height: 100%;
-    background-color:#FFF ;
-}
-
-.team-item .team-contact a{
-    background-color: #F2F1FA;
-}
-
-.team-item .team-contact i{
-    color: #8D8BA7;
-}
-
 /* QUESTION */
 
 .question .accordion-item{
@@ -492,12 +490,58 @@ input:checked ~ .sale-tag {
     
 }
 
+/* Team */
+
+.team{
+    background-color: #FAE6E7;
+}
+
+.team .team-item{
+    width: 100%;
+    height: 100%;
+    background-color:#FFF ;
+    transition: all 0.5s;
+}
+
+.team-item .team-contact a{
+    background-color: #F2F1FA;
+    transition: all 0.5;
+}
+
+.team-item .team-contact i{
+    color: #8D8BA7;
+}
+
+.team .team-icon a:hover{
+    background-color: #bf9658;
+    
+}
+
+.team .team-icon .btn:hover i{
+    color: white;
+}
+
+.team .team-item:hover{
+    background-color:#43291f ;
+  
+}
+
+.team .team-item:hover *{
+  color: white;
+}
+
+.team .team-item:hover i{
+    color: #43291f;
+}
+
+
+
 /* CONTACT */
 
 .contact__left{
     background-image: url(../img/contact-left.png) ;
     background-size: cover;
-    height: 28rem;
+    height: 30rem;
     border-radius: 5px;
     position: relative;
     
@@ -511,11 +555,12 @@ input:checked ~ .sale-tag {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
    
 }
 
 .contact_content{
+    width: 70%;
     position: absolute;
     top: 60%;
     left: 50%;
@@ -524,9 +569,26 @@ input:checked ~ .sale-tag {
     color:white;
 }
 
-.contact_content h5, .contact_content h2, .contact_content a{
+.contact_content h4, .contact_content p, .contact_content a{
     color:white;
 } 
+
+.color-change {
+    color: brown;
+    animation: changeColor 1s infinite alternate;
+  }
+
+  @keyframes changeColor {
+    0% {
+      color: brown; 
+    }
+    50% {
+      color: white; 
+    }
+    100% {
+      color: brown;
+    }
+  }
 
 .contact__right{
     background-color: #FBEADF;
@@ -572,20 +634,15 @@ footer{
     /* text-align: end; */
 }
 
-.footer_bottom .text-bottom{
-    position: absolute;
-    bottom: 0;
-}
-
-.footer_bottom .content-top{
-    position: absolute;
-    top: 20%;
-}
 
 .footer-icon a{
     border-radius: 50%;
     border: 1px solid #AB8D83;
     color: #AB8D83;
+}
+
+.footer-icon .btn:hover{
+    color: white;
 }
 
 @media screen and (max-width:768px) {
@@ -594,7 +651,7 @@ footer{
         display: none;
     }
 
-    .footer_bottom .col-lg-3 {
+    .footer_bottom .middle  {
         height: 10rem;
         width: 80%;
         margin: 0 auto;
