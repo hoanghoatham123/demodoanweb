@@ -3,32 +3,35 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
 .hero {
-    width: 100vw; 
-    height: 100vh; 
+    /* width: 100vw;  */
+    height: 80vh; 
     display: flex; 
     align-items: center; 
     background-image: url('../img/workshop/hero_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.card-title{
-    margin-left: 64px;
-    width: 50%;
-}
+
 .card-text {
     display: flex;
     align-items: center;
     line-height: 30px;
 }
 .text-pink{
-    font-size: 60px;
+    font-size: 4vh;
     font-weight: bold;
     font-family: 'Dela Gothic One', sans-serif;
     color: #DE7174;
 }
 
+
+
 .text-brown{
     font-family: 'Dela Gothic One', sans-serif;
-    font-size: 60px;
+    /* font-size: 60px; */
     font-weight: bold;
     color: #AB8D83;
 }
@@ -46,11 +49,10 @@
 }
 
 .phanhoi{
-    width: 95%; 
+    
     display: flex; 
     align-items: center; 
-    gap: 1rem;
-    margin: 35px;
+    gap: 0.5rem;
 }
 
 p {
@@ -59,15 +61,15 @@ p {
     margin-bottom: 1rem;
 }
 
-.btn-primary {
+.btn-primary1 {
     color: white;
     background-color: #DE7174;
     border-color: #DE7174;
     font-family: 'Dela Gothic One', sans-serif;
-    font-size: 19px;
-    width: 40%;
+    font-size: 1rem;
+    width: 15rem;
 }
-.btn-secondary {
+.btn-secondary1 {
     color: white;
     background-color: #DE7174;
     border-color: #DE7174;
@@ -84,11 +86,12 @@ p {
 
 h1{
     font-family: 'Dancing Script', cursive;
-    font-size: 80px;
+    /* font-size: 80px; */
 }
 h3{
     font-family: 'Dancing Script', cursive;
-    font-size: 48px;
+    
+    font-size: 4em;
 }
 h5{
     font-family: 'Dela Gothic One', sans-serif;
@@ -96,70 +99,25 @@ h5{
     color: #DE7174;
 }
 
-
-footer{
-    background-color: #FBEADF;
-}
-
-
-.footer_bottom .col-lg-3 ,.footer_bottom .col-lg-5 {
-    position: relative;
-}
-
-.footer_bottom img{
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%,-50%);
-}
-
-.subscribe input{
-    border: 0;
-    line-height: 100%;
-    margin-left: 1rem;
-}
-
-.subscribe{
-    background-color: white;
-    border-radius: 50rem;
-    /* text-align: end; */
-}
-
-.footer_bottom .text-bottom{
-    position: absolute;
-    bottom: 0;
-}
-
-.footer_bottom .content-top{
-    position: absolute;
-    top: 20%;
-}
-
-.footer-icon a{
-    border-radius: 50%;
-    border: 1px solid #AB8D83;
-    color: #AB8D83;
-}
-
-@media screen and (max-width:768px) {
-    
-    .responsive{
+/* RESPONSIVE */
+@media screen  and (max-width:768px){
+    .hero-content{
         display: none;
     }
 
-    .footer_bottom .col-lg-3 {
-        height: 10rem;
-        width: 80%;
-        margin: 0 auto;
+    .hero {
+        height: auto; 
         
     }
 
-    .footer-icon{
-        justify-content: center !important;
+    .text-pink1{
+        font-size: 1.5rem;
     }
 
-     .footer-contact{
-        text-align: center !important;
+    .phanhoi-title{
+        font-size: 2.5rem;
     }
+
+   
 }
 

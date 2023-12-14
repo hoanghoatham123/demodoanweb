@@ -1,0 +1,95 @@
+#side-img {
+    flex-shrink: 1;
+    width: 50vw; 
+    /* height: 100%;  */
+    background-image: url(../img/login/side_img.png); 
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    height: 100vh;
+}
+#form-container {
+    flex-grow: 1;
+    padding: 4rem; 
+    min-width: 50vh;
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem;
+}
+
+#form-container > form {
+    padding: 0 5rem;
+}
+
+input[type=text], input[type=password] {
+  all: unset;
+}
+
+input::placeholder {
+  color: rgba(64, 64, 64, 0.7);
+  font-size: 0.8em;
+
+}
+
+.input-container {
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  border-radius: 0.5rem;
+}
+
+.submit-btn {
+  all: unset;
+  display: block;
+  padding: 0.5rem;
+  background-color: #de7174;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.submit-btn:disabled {
+  cursor:not-allowed;
+}
+
+.form-check-input:checked {
+    background-color: #de7174;
+    border-color: #de7174;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: gray;
+}
+
+.logos {
+  gap: 3rem;
+  justify-content: center;
+}
+
+.logo {
+  padding: 0.5rem;
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #side-img {
+        display: none;
+    }
+     
+    #form-container {
+        width: 100vw;
+        padding: 2rem;
+    }
+
+    #form-container > form {
+        width: 100%;
+        padding: 0rem;
+    }
+}
