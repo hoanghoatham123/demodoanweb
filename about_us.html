@@ -28,12 +28,12 @@
 
 <body>
     <!-- HEADER -->
-    <header class="container-fluid position-static">
+    <header class="container-fluid  position-static">
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg py-4">
+            <nav class="navbar navbar-light navbar-expand-lg">
                 <a href="index.html" class="navbar-brand">
                     <div>
-                        <img src="./img/logo/logo-mau.png" alt="" />
+                        <img src="./img/logo/logo-mau.png" alt="" class="img-fluid" />
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -41,11 +41,12 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto">
+                    <div class="navbar-nav mx-auto" id="mainNav">
                         <a href="index.html" class="nav-item nav-link">Trang chủ</a>
-                        <a href="./about_us.html" class="nav-item nav-link  active">Giới thiệu</a>
-                        <a href="#" class="nav-item nav-link">Bộ sưu tập</a>
-                        <a href="#" class="nav-item nav-link">Tổ đội</a>
+                        <a href="./about_us.html" class="nav-item nav-link active">Giới thiệu</a>
+                        <a href="#bosuutap" class="nav-item nav-link">Bộ sưu tập</a>
+                        <a href="./workshop.html" class="nav-item nav-link">Workshop</a>
+                        <a href="#todoi" class="nav-item nav-link">Tổ đội</a>
 
                         <div class="nav-item dropdown">
                             <a href="menu.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Thực đơn</a>
@@ -57,7 +58,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="nav-item nav-link">Liên hệ</a>
+                        <a href="#lienhe" class="nav-item nav-link">Liên hệ</a>
                     </div>
                     <div
                         class="searchbox px-4 py-2 search nav-item position-relative d-flex gap-2 rounded-pill border-0 align-items-center">
@@ -69,6 +70,16 @@
                         <input type="text" value="" placeholder="Search for..."
                             class="border-0 px-2 bg-transparent flex-fill" />
                     </div>
+
+                    <div class="nav-item nav-link">
+                        <a href="#" class="px-3"><i class="fa fa-user-circle text-dark fs-3"></i></a>
+                        <a href="#" class=""> <i class="fa fa-shopping-cart text-dark fs-3"></i></a>
+                    </div>
+
+
+
+
+
                 </div>
             </nav>
         </div>
@@ -80,10 +91,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 d-flex align-items-center">
                     <div class="content">
-                        <h1>Our Story</h1>
-                        <h5 class="fw-light">When you send a cake, we know you aren’t just sending dessert. You are
-                            sending a moment of
-                            celebration, joy, healing and togetherness.
+                        <h1>Câu chuyện</h1>
+                        <h5 class="fw-light">Khi bạn đặt bánh, chúng tôi biết bạn không chỉ đặt món tráng miệng. Bạn
+                            đang gửi một khoảnh khắc của lễ kỷ niệm, niềm vui, sự chữa lành và sự đoàn kết.
                         </h5>
                     </div>
                 </div>
@@ -109,16 +119,18 @@
                 </div>
                 <div class="col-lg-6 col-md-12 border-secondary border rounded bg-light">
                     <div class="story-content p-3">
-                        <p>We understand that elegant presentation matters as much as the taste, and our team of very
-                            talented cake artisans take the time to decorate every cake by hand. Our shipping team then
-                            carefully packages your cake in our custom designed decorative boxes and sends them off to
-                            you. We Take The Cake goes the extra mile to make sure our mail order desserts deliver an
-                            experience that makes you proud that you chose us to create the gift people will talk about
-                            long after the celebration is over.
-                            The We Take The Cake team is a diverse group of people working closely together each day to
-                            provide desserts that help people celebrate the joys in their own lives and the lives of
-                            others. To share love and good wishes. And to bring a bit of comfort and happiness to those
-                            who deserve it.</p>
+                        <p class="lh-lg">Chúng tôi hiểu rằng cách trình bày trang nhã cũng quan trọng như hương vị và
+                            đội
+                            ngũ nghệ
+                            nhân làm bánh rất tài năng của chúng tôi đã dành thời gian để trang trí từng chiếc bánh bằng
+                            tay. Sau đó, đội ngũ vận chuyển của chúng tôi sẽ cẩn thận gói bánh của bạn vào các hộp trang
+                            trí được thiết kế riêng và gửi chúng cho bạn. Chúng tôi nỗ lực hơn nữa để đảm bảo món tráng
+                            miệng đặt hàng qua thư của chúng tôi mang lại trải nghiệm khiến bạn tự hào rằng bạn đã chọn
+                            chúng tôi để tạo ra món quà mà mọi người sẽ bàn tán rất lâu sau khi lễ kỷ niệm kết thúc.
+                            Nhóm Mặt trời nhỏ là một nhóm đa dạng gồm những người làm việc chặt chẽ với nhau mỗi ngày để
+                            cung cấp các món tráng miệng giúp mọi người tôn vinh niềm vui trong cuộc sống của chính họ
+                            và cuộc sống của những người khác. Để chia sẻ tình yêu và những lời chúc tốt đẹp. Và để mang
+                            lại một chút an ủi, hạnh phúc cho những người xứng đáng.</p>
                     </div>
                 </div>
             </div>
@@ -364,8 +376,9 @@
         <div class="container">
             <div class="text-center">
                 <h1 class="display-5">Blog</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus
-                    libero accumsan. </p>
+                <p class="text-content">Chào mừng bạn đến với blog của chúng tôi - nơi chia sẻ những kiến thức, trải
+                    nghiệm và cảm xúc, tạo
+                    nên một không gian ảo độc đáo để cùng nhau khám phá và tìm hiểu về nhiều chủ đề đa dạng. </p>
             </div>
             <div class="justify-content-center mt-4 owl-carousel owl-theme">
 
@@ -430,25 +443,25 @@
             </svg>
         </div>
         <div class="footer_bottom">
-            <div class="row w-100">
-                <div class="col-lg-5  responsive">
+            <div class="row w-100 mx-auto">
+                <div class="col-lg-4  responsive position-relative">
 
                     <img src="./img/logo/logo-mau.png" alt="" />
 
                 </div>
-                <div class="col-lg-3 col-md-12">
+                <div class="middle col-lg-4 col-md-12 d-flex flex-column justify-content-evenly align-items-center">
                     <div class="content-top">
-                        <p>Subscribe to the newsletter and be aware of promotions</p>
+                        <p>Đăng ký nhận bản tin và nhận biết các chương trình khuyến mãi</p>
                         <div class="subscribe d-flex justify-content-between">
                             <input type="text" placeholder="Email">
-                            <button class="btn btn-primary rounded-pill px-5">
+                            <button class="btn btn-secondary rounded-pill px-5">
                                 Gửi
                             </button>
                         </div>
                     </div>
 
                     <p class="text-bottom responsive">
-                        2023 ©Macaronsmania. All Rights Reserved.
+                        2023 ©Mặt trời nhỏ. Đã đăng ký bản quyền sử dụng.
                     </p>
                 </div>
                 <div class="col-lg-4  col-md-12 px-0 ">

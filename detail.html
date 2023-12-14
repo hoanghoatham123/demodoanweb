@@ -28,27 +28,29 @@
 
 <body>
     <!-- HEADER -->
-    <header class="container-fluid position-static">
+    <header class="container-fluid  position-static">
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg py-4">
+            <nav class="navbar navbar-light navbar-expand-lg">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="text-primary mb-0">
-                        Ca<span class="text-dark">ke</span>
-                    </h1>
+                    <div>
+                        <img src="./img/logo/logo-mau.png" alt="" class="img-fluid" />
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="./about_us.html" class="nav-item nav-link">About</a>
-                        <a href="#" class="nav-item nav-link">Collection</a>
-                        <a href="#" class="nav-item nav-link">Teams</a>
+                    <div class="navbar-nav mx-auto" id="mainNav">
+                        <a href="index.html" class="nav-item nav-link">Trang chủ</a>
+                        <a href="./about_us.html" class="nav-item nav-link ">Giới thiệu</a>
+                        <a href="#bosuutap" class="nav-item nav-link">Bộ sưu tập</a>
+                        <a href="./workshop.html" class="nav-item nav-link">Workshop</a>
+                        <a href="#todoi" class="nav-item nav-link">Tổ đội</a>
 
                         <div class="nav-item dropdown">
-                            <a href="menu.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
+                            <a href="menu.html" class="nav-link dropdown-toggle  active" data-bs-toggle="dropdown">Thực
+                                đơn</a>
                             <div class="dropdown-menu bg-light">
                                 <a href="menu.html" class="dropdown-item">Bánh ngọt</a>
                                 <a href="menu.html" class="dropdown-item">Bánh sinh nhật</a>
@@ -57,7 +59,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="nav-item nav-link">Contact</a>
+                        <a href="#lienhe" class="nav-item nav-link">Liên hệ</a>
                     </div>
                     <div
                         class="searchbox px-4 py-2 search nav-item position-relative d-flex gap-2 rounded-pill border-0 align-items-center">
@@ -69,10 +71,21 @@
                         <input type="text" value="" placeholder="Search for..."
                             class="border-0 px-2 bg-transparent flex-fill" />
                     </div>
+
+                    <div class="nav-item nav-link">
+                        <a href="#" class="px-3"><i class="fa fa-user-circle text-dark fs-3"></i></a>
+                        <a href="#" class=""> <i class="fa fa-shopping-cart text-dark fs-3"></i></a>
+                    </div>
+
+
+
+
+
                 </div>
             </nav>
         </div>
     </header>
+
 
     <!-- DETAIL__SLIDE -->
     <section class="container-fluid detail__slider">
@@ -460,25 +473,25 @@
             </svg>
         </div>
         <div class="footer_bottom">
-            <div class="row w-100">
-                <div class="col-lg-5  responsive">
+            <div class="row w-100 mx-auto">
+                <div class="col-lg-4  responsive position-relative">
 
                     <img src="./img/logo/logo-mau.png" alt="" />
 
                 </div>
-                <div class="col-lg-3 col-md-12">
+                <div class="middle col-lg-4 col-md-12 d-flex flex-column justify-content-evenly align-items-center">
                     <div class="content-top">
-                        <p>Subscribe to the newsletter and be aware of promotions</p>
+                        <p>Đăng ký nhận bản tin và nhận biết các chương trình khuyến mãi</p>
                         <div class="subscribe d-flex justify-content-between">
                             <input type="text" placeholder="Email">
-                            <button class="btn btn-primary rounded-pill px-5">
+                            <button class="btn btn-secondary rounded-pill px-5">
                                 Gửi
                             </button>
                         </div>
                     </div>
 
                     <p class="text-bottom responsive">
-                        2023 ©Macaronsmania. All Rights Reserved.
+                        2023 ©Mặt trời nhỏ. Đã đăng ký bản quyền sử dụng.
                     </p>
                 </div>
                 <div class="col-lg-4  col-md-12 px-0 ">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:image" content="./img/about.png" />
-    <title>Document</title>
+    <title>Thực đơn</title>
     <!-- font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,36 +28,38 @@
 
 <body>
     <!-- HEADER -->
-    <header class="container-fluid position-static">
+    <header class="container-fluid  position-static">
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg py-4">
+            <nav class="navbar navbar-light navbar-expand-lg">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="text-primary mb-0">
-                        Ca<span class="text-dark">ke</span>
-                    </h1>
+                    <div>
+                        <img src="./img/logo/logo-mau.png" alt="" class="img-fluid" />
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="./about_us.html" class="nav-item nav-link">About</a>
-                        <a href="#" class="nav-item nav-link">Collection</a>
-                        <a href="#" class="nav-item nav-link">Teams</a>
+                    <div class="navbar-nav mx-auto" id="mainNav">
+                        <a href="index.html" class="nav-item nav-link">Trang chủ</a>
+                        <a href="./about_us.html" class="nav-item nav-link ">Giới thiệu</a>
+                        <a href="#bosuutap" class="nav-item nav-link">Bộ sưu tập</a>
+                        <a href="./workshop.html" class="nav-item nav-link">Workshop</a>
+                        <a href="#todoi" class="nav-item nav-link">Tổ đội</a>
 
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Menu</a>
+                            <a href="menu.html" class="nav-link dropdown-toggle  active" data-bs-toggle="dropdown">Thực
+                                đơn</a>
                             <div class="dropdown-menu bg-light">
-                                <a href="" class="dropdown-item">Bánh ngọt</a>
-                                <a href="" class="dropdown-item">Bánh sinh nhật</a>
-                                <a href="" class="dropdown-item">Bánh mặn</a>
-                                <a href="" class="dropdown-item">Bánh mini</a>
+                                <a href="menu.html" class="dropdown-item">Bánh ngọt</a>
+                                <a href="menu.html" class="dropdown-item">Bánh sinh nhật</a>
+                                <a href="menu.html" class="dropdown-item">Bánh mặn</a>
+                                <a href="menu.html" class="dropdown-item">Bánh mini</a>
                             </div>
                         </div>
 
-                        <a href="#" class="nav-item nav-link">Contact</a>
+                        <a href="#lienhe" class="nav-item nav-link">Liên hệ</a>
                     </div>
                     <div
                         class="searchbox px-4 py-2 search nav-item position-relative d-flex gap-2 rounded-pill border-0 align-items-center">
@@ -69,10 +71,21 @@
                         <input type="text" value="" placeholder="Search for..."
                             class="border-0 px-2 bg-transparent flex-fill" />
                     </div>
+
+                    <div class="nav-item nav-link">
+                        <a href="#" class="px-3"><i class="fa fa-user-circle text-dark fs-3"></i></a>
+                        <a href="#" class=""> <i class="fa fa-shopping-cart text-dark fs-3"></i></a>
+                    </div>
+
+
+
+
+
                 </div>
             </nav>
         </div>
     </header>
+
 
     <!-- Banner -->
     <section class="banner container-fluid py-3 mb-3">
@@ -80,7 +93,7 @@
             <div class="row gx-5 align-items-center">
                 <div class="banner__left col-5">
                     <h1 class="display-1">Thực đơn</h1>
-                    <p class="text-dark fw-bold">
+                    <p class="text-dark fw-bold banner-text">
                         Dòng bánh sinh nhật mini dễ thương có nguồn gốc từ Hàn Quốc ai
                         nhìn cũng mê Bánh nhỏ nhỏ xinh xinh nhưng gửi gắm những tình cảm
                         to lớn đến người nhận.
@@ -386,17 +399,17 @@
 </div>
 
 <!-- CONTACT -->
-<div class="contact container-fluid py-3 my-3">
+<div class="contact container-fluid py-3 my-3" id="lienhe">
     <div class="container">
-        <div class="row g-4 align-items-center justify-content-between">
+        <div class="row g-4 justify-content-between">
             <div class="col-lg-6">
                 <div class="contact__left">
                     <div class="contact_content">
-                        <h5>CONTACT US</h5>
-                        <h2 class="">Get in touch today</h2>
+                        <p class="color-change fs-4"> <i class="fa fa-hand-point-right"></i> <u class=""> Liên hệ ngay
+                                để nhận
+                                nhiều ưu đãi!</u></p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Necessitatibus, earum.
+                            Để liên hệ với chúng tôi và biết thêm thông tin về sản phẩm hay dịch vụ.
                         </p>
                         <div class="contact__info">
                             <p>
@@ -404,7 +417,7 @@
                             </p>
                             <p><i class="fa fa-phone me-1"></i><a href=""> 123.456.789</a></p>
                             <p>
-                                <i class="fa fa-map-marker-alt me-1"></i><a href=""> Linh Trung - Thu Duc</a>
+                                <i class="fa fa-map-marker-alt me-1"></i><a href=""> Linh Trung - Thủ đức, TP HCM</a>
                             </p>
                         </div>
                     </div>
@@ -415,29 +428,31 @@
             <div class="col-lg-6 contact__right">
                 <form class="row py-3">
                     <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Họ tên</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Nguyễn Văn A" />
+                    </div>
+
+                    <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" />
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="abc@email.com" />
                     </div>
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" />
+                        <label for="inputPassword4" class="form-label">Điện thoại</label>
+                        <input type="tel" class="form-control" id="inputPassword4" placeholder="0794053456" />
                     </div>
+
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Company</label>
-                        <input type="email" class="form-control" id="inputEmail4" />
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Telephone</label>
-                        <input type="password" class="form-control" id="inputPassword4" />
+                        <label for="inputPassword4" class="form-label">Link facebook</label>
+                        <input type="text" class="form-control" id="inputPassword4" placeholder="A Nguyễn" />
                     </div>
                     <div class="col-md-12">
-                        <label for="" class="form-label">Message</label>
-                        <textarea name="" id="" cols="30" rows="6" placeholder="Please..."
+                        <label for="" class="form-label">Nội dung</label>
+                        <textarea name="" id="" cols="30" rows="6" placeholder="Nội dung chi tiết"
                             class="form-control"></textarea>
                     </div>
                     <div class="col-12 mt-3">
-                        <button type="submit" class="btn btn-primary rounded-pill p-3">
-                            Send Message <i class="fas fa-arrow-right ps-2"></i>
+                        <button type="submit" class="btn btn-secondary rounded-pill p-3">
+                            Gửi yêu cầu <i class="fas fa-arrow-right ps-2"></i>
                         </button>
                     </div>
                 </form>
@@ -458,25 +473,25 @@
         </svg>
     </div>
     <div class="footer_bottom">
-        <div class="row w-100">
-            <div class="col-lg-5  responsive">
+        <div class="row w-100 mx-auto">
+            <div class="col-lg-4  responsive position-relative">
 
                 <img src="./img/logo/logo-mau.png" alt="" />
 
             </div>
-            <div class="col-lg-3 col-md-12">
+            <div class="middle col-lg-4 col-md-12 d-flex flex-column justify-content-evenly align-items-center">
                 <div class="content-top">
-                    <p>Subscribe to the newsletter and be aware of promotions</p>
+                    <p>Đăng ký nhận bản tin và nhận biết các chương trình khuyến mãi</p>
                     <div class="subscribe d-flex justify-content-between">
                         <input type="text" placeholder="Email">
-                        <button class="btn btn-primary rounded-pill px-5">
+                        <button class="btn btn-secondary rounded-pill px-5">
                             Gửi
                         </button>
                     </div>
                 </div>
 
                 <p class="text-bottom responsive">
-                    2023 ©Macaronsmania. All Rights Reserved.
+                    2023 ©Mặt trời nhỏ. Đã đăng ký bản quyền sử dụng.
                 </p>
             </div>
             <div class="col-lg-4  col-md-12 px-0 ">
