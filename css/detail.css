@@ -133,6 +133,10 @@
     width: 10rem;
 }
 
+.modal-cart .selection-item i{
+    cursor: pointer;
+}
+
 .modal-cart .buy-together{
     border-radius: 0.5rem;
     background-color: #FEF5F5;
