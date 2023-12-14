@@ -19,6 +19,24 @@ button {
     color: white ;
 }
 
+.text-content{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    color: #6F7CB2;
+}
+
+@media only screen and (max-width: 768px) {
+    .text-content{
+        width: 90%;
+    }
+    
+
+
+}
+
+
+
 /* HEADER */
 header{
     position: fixed;
@@ -53,7 +71,7 @@ header{
 
 .navbar .searchbox {
   background-color: #e3e3e5;
-  width: 30%;
+  /* width: 30%; */
 }
 
 input{
@@ -123,11 +141,15 @@ input{
 }
 .title_slider{
     margin-top: 1.5em;
-    color: #e3d5ca;
+    color: #e3d5ca ;
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
     font-size: 15px;
 }
+.title_slider p{
+    color: #e3d5ca ;
+}
+
 .highlight_slider{
     color: white;
     font-size: 20px;
@@ -154,11 +176,21 @@ input{
     width: 2em;
 }
 
+.slider .slider-description{
+    color: #FEDADB;
+}
+
 @media only screen and (max-width: 768px) {
     .sanpham {
         margin: 0 auto;
         max-width: 80%;
     }
+
+    .slider .slider-description{
+        display: none;
+    }
+
+
 }
 
 /* ABOUT */
@@ -267,16 +299,16 @@ input:checked + label .description{
     transform: translateY(0) !important;
 }
 .card[for="c1"]{
-    background-image: url(/img/best/fb2.jpg);   
+    background-image: url(../img/best/fb2.jpg);   
 }
 .card[for="c2"]{
-    background-image: url(/img/best/fb3.jpg);   
+    background-image: url(../img/best/fb3.jpg);   
 }
 .card[for="c3"]{
-    background-image: url(/img/best/fb4.jpg);   
+    background-image: url(../img/best/fb4.jpg);   
 }
 .card[for="c4"]{
-    background-image: url(/img/best/fb5.jpg);   
+    background-image: url(../img/best/fb5.jpg);   
 }
 input:checked ~ .sale-tag {
     opacity: 1;
@@ -439,26 +471,6 @@ input:checked ~ .sale-tag {
     font-size: 14px;
 }
 
-/* Team */
-
-.team{
-    background-color: #FAE6E7;
-}
-
-.team .team-item{
-    width: 100%;
-    height: 100%;
-    background-color:#FFF ;
-}
-
-.team-item .team-contact a{
-    background-color: #F2F1FA;
-}
-
-.team-item .team-contact i{
-    color: #8D8BA7;
-}
-
 /* QUESTION */
 
 .question .accordion-item{
@@ -478,12 +490,58 @@ input:checked ~ .sale-tag {
     
 }
 
+/* Team */
+
+.team{
+    background-color: #FAE6E7;
+}
+
+.team .team-item{
+    width: 100%;
+    height: 100%;
+    background-color:#FFF ;
+    transition: all 0.5s;
+}
+
+.team-item .team-contact a{
+    background-color: #F2F1FA;
+    transition: all 0.5;
+}
+
+.team-item .team-contact i{
+    color: #8D8BA7;
+}
+
+.team .team-icon a:hover{
+    background-color: #bf9658;
+    
+}
+
+.team .team-icon .btn:hover i{
+    color: white;
+}
+
+.team .team-item:hover{
+    background-color:#43291f ;
+  
+}
+
+.team .team-item:hover *{
+  color: white;
+}
+
+.team .team-item:hover i{
+    color: #43291f;
+}
+
+
+
 /* CONTACT */
 
 .contact__left{
     background-image: url(../img/contact-left.png) ;
     background-size: cover;
-    height: 28rem;
+    height: 30rem;
     border-radius: 5px;
     position: relative;
     
@@ -497,11 +555,12 @@ input:checked ~ .sale-tag {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
    
 }
 
 .contact_content{
+    width: 70%;
     position: absolute;
     top: 60%;
     left: 50%;
@@ -510,9 +569,26 @@ input:checked ~ .sale-tag {
     color:white;
 }
 
-.contact_content h5, .contact_content h2, .contact_content a{
+.contact_content h4, .contact_content p, .contact_content a{
     color:white;
 } 
+
+.color-change {
+    color: brown;
+    animation: changeColor 1s infinite alternate;
+  }
+
+  @keyframes changeColor {
+    0% {
+      color: brown; 
+    }
+    50% {
+      color: white; 
+    }
+    100% {
+      color: brown;
+    }
+  }
 
 .contact__right{
     background-color: #FBEADF;
@@ -558,20 +634,15 @@ footer{
     /* text-align: end; */
 }
 
-.footer_bottom .text-bottom{
-    position: absolute;
-    bottom: 0;
-}
-
-.footer_bottom .content-top{
-    position: absolute;
-    top: 20%;
-}
 
 .footer-icon a{
     border-radius: 50%;
     border: 1px solid #AB8D83;
     color: #AB8D83;
+}
+
+.footer-icon .btn:hover{
+    color: white;
 }
 
 @media screen and (max-width:768px) {
@@ -580,7 +651,7 @@ footer{
         display: none;
     }
 
-    .footer_bottom .col-lg-3 {
+    .footer_bottom .middle  {
         height: 10rem;
         width: 80%;
         margin: 0 auto;
@@ -595,4 +666,3 @@ footer{
         text-align: center !important;
     }
 }
-
