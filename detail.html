@@ -135,7 +135,7 @@
 
                         </div>
                         <div class="card_area d-flex align-items-center">
-                            <button class="btn " href="#">Mua ngay</button>
+                            <button class="btn " href="#" onclick="addProduct()">Mua ngay</button>
                             <button class="icon_btn btn ms-3" href="#" id="cart" onclick="addProduct()">Thêm vào giỏ <i
                                     class="fa fa-shopping-bag"></i></button>
 
@@ -338,7 +338,7 @@
                                 <div class="row contact_form form-group" action="#">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="name" name="name"
+                                            <input type="text" class="form-control" id="nameuser" name="name"
                                                 placeholder="Họ tên">
                                         </div>
                                     </div>
@@ -577,8 +577,14 @@
 
     //add comment
     let comment = () => {
-        let name = document.getElementById("name").value;
+        let name = document.getElementById("nameuser").value;
         let message = document.getElementById("message").value;
+
+        if (name === "" || message === "") {
+            alert("Vui lòng nhập đầy đủ thông tin!");
+            return;
+        };
+
         let timenow = new Date();
         let date = timenow.getDate();
         let month = timenow.getMonth() + 1;

@@ -89,7 +89,7 @@
   <div class="slider container-fluid">
     <div class="text-center d-relative">
       <div class="position-absolute top-50 start-50 translate-middle text-light w-75">
-        <h1 class="text-light fw-light display-2">
+        <h1 class="text-light fw-light display-3">
           Tiệm bánh mặt trời nhỏ <br />
           Mang đến tinh hoa từ thợ bánh
         </h1>
@@ -903,7 +903,7 @@
         <div class="col-lg-6">
           <div class="contact__left">
             <div class="contact_content">
-              <p class="color-change fs-4"> <i class="fa fa-hand-point-right"></i> <u class=""> Liên hệ ngay để nhận
+              <p class="color-change fs-4"> <i class="fa fa-hand-point-right"></i> <u class="sock"> Liên hệ ngay để nhận
                   nhiều ưu đãi!</u></p>
               <p>
                 Để liên hệ với chúng tôi và biết thêm thông tin về sản phẩm hay dịch vụ.
@@ -923,29 +923,29 @@
 
         </div>
         <div class="col-lg-6 contact__right">
-          <form class="row py-3">
+          <form class="row py-3" action="#" id="contactForm">
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Họ tên</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Nguyễn Văn A" />
+              <input type="text" class="form-control" id="inputName" placeholder="Nguyễn Văn A" />
             </div>
 
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="abc@email.com" />
+              <input type="email" class="form-control" id="inputEmail" placeholder="abc@email.com" />
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Điện thoại</label>
-              <input type="tel" class="form-control" id="inputPassword4" placeholder="0794053456" />
+              <input type="tel" class="form-control" id="inputTelephone" placeholder="0794053456" />
             </div>
 
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Link facebook</label>
-              <input type="text" class="form-control" id="inputPassword4" placeholder="A Nguyễn" />
+              <input type="text" class="form-control" id="inputlinkFB" placeholder="A Nguyễn" />
             </div>
             <div class="col-md-12">
               <label for="" class="form-label">Nội dung</label>
-              <textarea name="" id="" cols="30" rows="6" placeholder="Nội dung chi tiết"
-                class="form-control"></textarea>
+              <textarea name="" cols="30" rows="6" placeholder="Nội dung chi tiết" class="form-control"
+                id="inputContent"></textarea>
             </div>
             <div class="col-12 mt-3">
               <button type="submit" class="btn btn-secondary rounded-pill p-3">
@@ -1133,6 +1133,23 @@
       }, 500);
 
     });
+  });
+
+  //send-form
+
+  document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var name = document.getElementById("inputName").value;
+    var email = document.getElementById("inputEmail").value;
+    var phone = document.getElementById("inputTelephone").value;
+    var linkFB = document.getElementById("inputlinkFB").value;
+    var content = document.getElementById("inputContent").value;
+
+    if (name === "" || email === "" || phone === "" || linkFB === "" || content === "") {
+      alert("Vui lòng nhập đầy đủ thông tin!");
+      return;
+    }
+    alert("Gửi thành công!");
   });
 
 </script>
