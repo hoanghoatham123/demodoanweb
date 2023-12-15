@@ -232,6 +232,11 @@
 }
 
 /* RELATED PRODUCTS */
+
+  .related-product{
+    background-color: #FAE6E7;
+  } 
+
 .product-item {
     position: relative;
 }

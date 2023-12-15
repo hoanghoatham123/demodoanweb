@@ -529,7 +529,7 @@
   </div>
 
   <!-- feedback -->
-  <section class="feedback section py-3 mb-3">
+  <section class="container-fluid feedback section py-3 mb-3">
     <div class="heading heading--white text-center">
       <h1>Đánh giá từ các khách hàng</h1>
       <p>
@@ -544,7 +544,7 @@
             <div class="fb-overlay"></div>
             <div class="fb">
               <div class="review">
-                <img src="/img/fb/avt1.png" alt="" />
+                <img src="./img/fb/avt1.png" alt="" />
                 <div class="review-name">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -580,7 +580,7 @@
             <div class="fb-overlay"></div>
             <div class="fb">
               <div class="review">
-                <img src="/img/fb/avt2.png" alt="" />
+                <img src="./img/fb/avt2.png" alt="" />
                 <div class="review-name">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -612,7 +612,7 @@
             <div class="fb-overlay"></div>
             <div class="fb">
               <div class="review">
-                <img src="/img/fb/avt3.png" alt="" />
+                <img src="./img/fb/avt3.png" alt="" />
                 <div class="review-name">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -648,7 +648,7 @@
             <div class="fb-overlay"></div>
             <div class="fb">
               <div class="review">
-                <img src="/img/fb/avt4.png" alt="" />
+                <img src="./img/fb/avt4.png" alt="" />
                 <div class="review-name">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -1015,6 +1015,18 @@
 
   </footer>
 
+  <!-- quangcao -->
+  <div id="popupAd">
+    <div class="box-popup h-100 d-flex justify-content-center align-items-center">
+      <div class="popup-content position-relative">
+        <i class="fa fa-times-circle" id="closePopup"></i>
+        <img src="./img/quangcao.png" alt="" class="img-thumbnail">
+      </div>
+    </div>
+
+  </div>
+
+
   <!-- CHATMESS -->
   <!-- Messenger Plugin chat Code -->
   <div id="fb-root"></div>
@@ -1151,6 +1163,19 @@
     }
     alert("Gửi thành công!");
   });
+
+  //quang cao
+  $(document).ready(function () {
+
+    setTimeout(function () {
+      $("#popupAd").fadeIn();
+    }, 2000);
+
+    $("#closePopup").click(function () {
+      $("#popupAd").fadeOut();
+    });
+  });
+
 
 </script>
 
