@@ -414,31 +414,51 @@ input:checked ~ .sale-tag {
     background-size: cover;
 }
 .bg-fb1{
-    width: 23.4rem;
-    height: 23.6rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 27rem;
     background-image: url(../img/fb/fb1.png);
 }
 .bg-fb2{
-    width: 23.4rem;
-    height: 23.6rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 27rem;
     background-image: url(../img/fb/fb2.png);
 }
 .bg-fb3{
-    width: 23.4rem;
-    height: 23.6rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 27rem;
     background-image: url(../img/fb/fb3.png);
 }
 .bg-fb4{
-    width: 23.4rem;
-    height: 23.6rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 27rem;
     background-image: url(../img/fb/fb4.png);
 }
 .fb-overlay{
     position: absolute;
-    width: 23.4rem;
-    height: 23.6rem;
+    width: 100%;
+    height: 100%;
     background-color: white;
-    opacity: 45%;
+    opacity: 35%;
 }
 .fb{
     position: absolute;
