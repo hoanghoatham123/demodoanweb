@@ -416,22 +416,22 @@ input:checked ~ .sale-tag {
 .bg-fb1{
     width: 23.4rem;
     height: 23.6rem;
-    background-image: url(/img/fb/fb1.png);
+    background-image: url(../img/fb/fb1.png);
 }
 .bg-fb2{
     width: 23.4rem;
     height: 23.6rem;
-    background-image: url(/img/fb/fb2.png);
+    background-image: url(../img/fb/fb2.png);
 }
 .bg-fb3{
     width: 23.4rem;
     height: 23.6rem;
-    background-image: url(/img/fb/fb3.png);
+    background-image: url(../img/fb/fb3.png);
 }
 .bg-fb4{
     width: 23.4rem;
     height: 23.6rem;
-    background-image: url(/img/fb/fb4.png);
+    background-image: url(../img/fb/fb4.png);
 }
 .fb-overlay{
     position: absolute;
