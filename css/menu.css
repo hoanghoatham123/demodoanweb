@@ -192,6 +192,136 @@ a {
     transform: translateY(-15%);
 }
 
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%; 
+    transform: translate(-50%,220%);
+    background: #fff; 
+    border: 1px solid #d1c8c5;
+    border-radius: 5px;  
+  }
+
+  .popup i{
+    color: green;
+  }
+
+
+
+  /* MODAL ADD PRODUCT TO CART */
+
+.modal-cart{
+    background-color:#FEECEC;
+    position: fixed;
+    top: 0;
+    right: -120%;
+    width: 35vw;
+    max-height: 100%;
+    overflow-y: scroll;
+   z-index: 10;
+    transition: right 0.5s;
+}
+
+.modal-cart h4{
+    font-size: 120%;
+    margin-bottom: 0;
+}
+
+.show{
+    right: 0;
+}
+
+.modal-cart i{
+    font-size: 120%;
+    color: black;
+}
+
+.modal-head i{
+    font-size: 2rem;
+    color: #F45757;
+    cursor: pointer;
+}
+
+.modal-head span{
+    color: #F45757;
+}
+
+.modal-cart .selection-item{
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    /* margin-bottom: 4rem; */
+}
+
+.modal-cart .row input,.modal-cart .pay button:first-child
+{
+    background: none;
+}
+
+.modal-cart .item-pay .quantity{
+    border: 2px solid black;
+    padding: 3% 6%;
+    border-radius: 2rem;
+    width: 10rem;
+}
+
+.modal-cart .selection-item i{
+    cursor: pointer;
+}
+
+.modal-cart .buy-together{
+    border-radius: 0.5rem;
+    background-color: #FEF5F5;
+}
+
+.modal-cart .buy-together > h4{
+    color: #F45757;
+}
+
+.modal-cart .buy-together .btn{
+    font-weight: bold;
+    color: black;
+    padding: 2% 4%;
+    border-radius: 2rem;
+    border: 1px solid #353535;
+    background-color: #FBC400;
+}
+
+.modal-cart .pay-total{
+    border-radius: 0.5rem;
+    background-color: #FBC5C5;
+}
+
+.modal-cart .item-info h4 {
+    /* font-size: 1rem; */
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.modal-cart .total p{
+    font-size: 100%;
+    color: #F45757;
+    font-weight: bold;
+}
+
+.modal-cart .pay .btn{
+    font-weight: bold;
+    color: black;
+    padding: 2% 4%;
+    border-radius: 2rem;
+    border: 1px solid #353535;
+    background-color: #F45757;
+}
+
+@media screen and (max-width : 768px){
+    .modal-cart{
+        width: 100vw;
+        padding: 0 1vw;
+    }
+}
+
 /* RESPONSIVE */
 @media screen and (max-width:768px){
     .banner-text{

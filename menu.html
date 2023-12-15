@@ -75,7 +75,8 @@
 
                     <div class="nav-item nav-link">
                         <a href="#" class="px-3"><i class="fa fa-user-circle text-dark fs-3"></i></a>
-                        <a href="#" class=""> <i class="fa fa-shopping-cart text-dark fs-3"></i></a>
+                        <button class="bg-light border-0" onclick="ShowModal()"> <i
+                                class="fa fa-shopping-cart text-dark fs-3"></i></button>
                     </div>
 
 
@@ -250,7 +251,7 @@
                                 <h6 class="l-through">$210.00</h6>
                             </div>
                             <div class="prd-bottom d-flex">
-                                <button class="btn"><a href="detail.html?productId=product1&productName=BanhNgot">Mua
+                                <button class="btn"><a href="detail.html?productId=product1">Mua
                                         ngay</a></button>
                                 <button class="btn btn-secondary ms-2" onclick="addToCart('product1')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -274,7 +275,7 @@
                                 <h6 class="l-through">$210.00</h6>
                             </div>
                             <div class="prd-bottom">
-                                <button class="btn"><a href="detail.html">Mua ngay</a></button>
+                                <button class="btn"><a href="detail.html?productId=product2">Mua ngay</a></button>
 
                                 <button class="btn  btn-secondary ms-2" onclick="addToCart('product2')">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -289,7 +290,7 @@
 
                     <!-- single product -->
 
-                    <div class="single-product col-lg-4 col-md-6">
+                    <div class="single-product col-lg-4 col-md-6" data-product-id="product3">
                         <img class="img-fluid" src="./img/Rectangle 4508.png" alt="" />
                         <div class="product-details">
                             <h6>Bánh hương vani</h6>
@@ -298,22 +299,22 @@
                                 <h6 class="l-through">$210.00</h6>
                             </div>
                             <div class="prd-bottom">
-                                <button class="btn"><a href="detail.html">Mua ngay</a></button>
+                                <button class="btn"><a href="detail.html?productId=product3">Mua ngay</a></button>
 
-                                <button class="btn ms-2"><a href="detail.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
-                                        </svg>
-                                    </a></button>
+                                <button class="btn btn-secondary ms-2" onclick="addToCart('product3')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- single product -->
 
-                    <div class="single-product col-lg-4 col-md-6">
+                    <div class="single-product col-lg-4 col-md-6" data-product-id="product4">
                         <img class="img-fluid" src="./img/Rectangle 4509.png" alt="" />
                         <div class="product-details">
                             <h6>Bánh kem cắt sẵn</h6>
@@ -322,22 +323,22 @@
                                 <h6 class="l-through">$210.00</h6>
                             </div>
                             <div class="prd-bottom">
-                                <button class="btn"><a href="detail.html">Mua ngay</a></button>
+                                <button class="btn"><a href="detail.html?productId=product4">Mua ngay</a></button>
 
-                                <button class="btn ms-2"><a href="detail.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
-                                        </svg>
-                                    </a></button>
+                                <button class="btn btn-secondary ms-2" onclick="addToCart('product4')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- single product -->
 
-                    <div class="single-product col-lg-4 col-md-6">
+                    <div class="single-product col-lg-4 col-md-6" data-product-id="product5">
                         <img class="img-fluid" src="./img/Rectangle 4510.png" alt="" />
                         <div class="product-details">
                             <h6>Bánh ngọt</h6>
@@ -346,39 +347,39 @@
                                 <h6 class="l-through">$210.00</h6>
                             </div>
                             <div class="prd-bottom">
-                                <button class="btn"><a href="detail.html">Mua ngay</a></button>
+                                <button class="btn"><a href="detail.html?productId=product5">Mua ngay</a></button>
 
-                                <button class="btn ms-2"><a href="detail.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
-                                        </svg>
-                                    </a></button>
+                                <button class="btn btn-secondary ms-2" onclick="addToCart('product5')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- single product -->
 
-                    <div class="single-product col-lg-4 col-md-6">
+                    <div class="single-product col-lg-4 col-md-6" data-product-id="product6">
                         <img class="img-fluid" src="./img/Rectangle 4511.png" alt="" />
                         <div class="product-details">
-                            <h6>Bánh ngọt</h6>
+                            <h6>Bánh kem mứt</h6>
                             <div class="price">
                                 <h6>$999.00</h6>
                                 <h6 class="l-through">$210.00</h6>
                             </div>
                             <div class="prd-bottom">
-                                <button class="btn"><a href="detail.html">Mua ngay</a></button>
+                                <button class="btn"><a href="detail.html?productId=product6">Mua ngay</a></button>
 
-                                <button class="btn ms-2"><a href="detail.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
-                                        </svg>
-                                    </a></button>
+                                <button class="btn btn-secondary ms-2" onclick="addToCart('product6')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -520,6 +521,112 @@
     </div>
 
 </footer>
+
+<!-- MODAL ADD PRODUCT TO CART  -->
+<div class="modal-cart" id="modal-cart">
+    <div class="container">
+        <div class="modal-head d-flex justify-content-between mt-3">
+            <h2 class="fst-normal">Giỏ hàng của bạn <span>(3)</span> </h2>
+            <i class="fa fa-times-circle" onclick="HideModal()"></i>
+        </div>
+        <div class="list-cart">
+            <div class="selection-item my-3">
+                <div class="row">
+                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image1.png" alt=""></div>
+                    <div class="col-9">
+                        <div class="item-info d-flex justify-content-between align-items-center">
+                            <h4>Bánh quy sô cô la kết hợp cùng hạnh nhân.</h4>
+                            <i class="fa fa-trash"></i>
+                        </div>
+                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                            <h4>$12.99</h4>
+                            <div class="form-group ">
+
+                                <div class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                    <i class="fa fa-minus"></i>
+                                    <input type="text" value="1" name="quantity" id=""
+                                        class="text-center w-25 border-0">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selection-item my-3">
+                <div class="row">
+                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image2.png" alt=""></div>
+                    <div class="col-9">
+                        <div class="item-info d-flex justify-content-between align-items-center">
+                            <h4>Bánh quy bơ đậu phộng kết hợp cùng socola chip</h4>
+                            <i class="fa fa-trash"></i>
+                        </div>
+                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                            <h4>$11.05</h4>
+                            <div class="form-group ">
+
+                                <div class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                    <i class="fa fa-minus"></i>
+                                    <input type="text" value="2" name="quantity" id=""
+                                        class="text-center w-25 border-0">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="buy-together mt-3">
+            <h4 class="text-center">Thường được mua cùng với</h4>
+            <div class="selection-item">
+                <div class="row">
+                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image3.png" alt=""></div>
+                    <div class="col-9">
+                        <div class="item-info d-flex justify-content-between align-items-center">
+                            <h4>Vegan Chocolate Chip Cookie Dough</h4>
+                            <i class="fa fa-trash"></i>
+                        </div>
+                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                            <h4>$12.99</h4>
+                            <button type="button" class="btn">Thêm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pay-total  my-3
+        p-3">
+            <div class="container total d-flex justify-content-between">
+                <p>Tổng cộng</p>
+                <p>$35.09</p>
+            </div>
+            <div class="pay d-flex justify-content-between">
+                <button class="btn" onclick="HideModal()">Tiếp tục xem bánh</button>
+                <button class="btn"><a href="./pay_info.html" class="text-dark">Thanh toán</a></button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- POPUP -->
+
+<div class="popup rounded p-1">
+    <p class="mb-0"><i class="fa fa-check-circle"></i> Thêm thành công!</p>
+</div>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!-- bootstrap js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -583,9 +690,122 @@
         }
 
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        $('.popup').fadeIn();
+
+        setTimeout(function () {
+            $('.popup').fadeOut();
+        }, 1000);
+    }
+
+    //save-list-product
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!JSON.parse(localStorage.getItem('listItems'))) {
+            var listItems = {};
+            let listProducts = document.querySelectorAll(`.single-product`);
+            listProducts.forEach(item => {
+                let productId = item.getAttribute("data-product-id");
+                let name = item.querySelector('h6').textContent;
+                let price = item.querySelector('.price h6').textContent;
+                let image = item.querySelector('img').src;
+
+                listItems[productId] = { name, price, image };
+
+            })
+
+            console.log(listItems);
+            localStorage.setItem('listItems', JSON.stringify(listItems));
+
+        }
+
+    });
+
+    // show & hide modal mart
+    let ShowModal = () => {
+        updateCart();
+        var modal = document.getElementById("modal-cart");
+        modal.classList.add("show");
+    }
+
+    let HideModal = () => {
+        var modal = document.getElementById("modal-cart");
+        modal.classList.remove("show");
     }
 
 
+    //update-cart
+    function updateCart() {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+        let cartContainer = document.querySelector('.modal-cart .container .list-cart');
+        let totalAmount = 0;
+        let totalQuantity = 0;
+        let price = 0;
+        cartContainer.querySelectorAll('.selection-item').forEach(e => e.remove());
+
+        for (const [productId, item] of Object.entries(cartItems)) {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'selection-item my-3';
+            itemElement.innerHTML = `
+            <div class="row">
+                <div class="col-3"><img class="img-fluid" src="${item.image}" alt=""></div>
+                <div class="col-9">
+                    <div class="item-info d-flex justify-content-between align-items-center">
+                        <h4>${item.name}</h4>
+                        <i class="fa fa-trash" onclick="removeItem('${productId}')"></i>
+                    </div>
+                    <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                        <h4>${item.price}</h4>
+                        <div class="quantity d-flex align-items-center mt-0 justify-content-between">
+                            <i class="fa fa-minus" onclick="updateQuantity('${productId}', false)"></i>
+                            <input type="text" value="${item.quantity}" class="text-center w-25 border-0" readonly>
+                            <i class="fa fa-plus" onclick="updateQuantity('${productId}', true)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+            cartContainer.insertBefore(itemElement, cartContainer.children[2]);
+            price = parseFloat((item.price).replace('$', '').replace(',', ''));
+            totalAmount += (price * (item.quantity));
+            console.log(totalAmount);
+            totalQuantity += item.quantity;
+        }
+
+        document.querySelector('.modal-cart .modal-head h2 span').textContent = `(${totalQuantity})`;
+        console.log(totalAmount);
+        var payTotal = totalAmount.toFixed(2);
+        document.querySelector('.modal-cart .total p:last-child').textContent = `${payTotal}`;
+    }
+
+    function updateQuantity(productId, isIncrement) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+
+        if (cartItems[productId]) {
+            if (isIncrement) {
+                cartItems[productId].quantity++;
+            } else {
+                if (cartItems[productId].quantity > 1) {
+                    cartItems[productId].quantity--;
+                } else {
+                    delete cartItems[productId];
+                }
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCart();
+        }
+    }
+
+    function removeItem(productId) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+
+        if (cartItems[productId]) {
+            delete cartItems[productId];
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCart();
+        }
+    }
 
 </script>
 

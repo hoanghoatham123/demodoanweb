@@ -74,7 +74,8 @@
 
                     <div class="nav-item nav-link">
                         <a href="#" class="px-3"><i class="fa fa-user-circle text-dark fs-3"></i></a>
-                        <a href="#" class=""> <i class="fa fa-shopping-cart text-dark fs-3"></i></a>
+                        <button class="bg-light border-0" onclick="ShowModal()"> <i
+                                class="fa fa-shopping-cart text-dark fs-3"></i></button>
                     </div>
 
 
@@ -107,7 +108,7 @@
                 <div class="col-lg-6">
 
                     <div class="detail_item w-100 h-100">
-                        <img class="img-fluid w-100" src="./img/Rectangle 4541.png" alt="">
+                        <img class="img-fluid w-100" src="./img/Rectangle 4541.png" alt="" id="product-img">
                     </div>
 
 
@@ -115,7 +116,7 @@
                 <div class="col-lg-5 offset-lg-1">
                     <div class="detail__text">
                         <h1 class="display-5" id="name">BÁNH NGỌT!</h1>
-                        <h2>$150.00</h2>
+                        <h2 id="price">$150.00</h2>
                         <p class="mb-0">Đánh giá: 4.6<i class="fa fa-star-half-alt"></i></p>
                         <p>Tình trạng: <b> còn hàng.</b></p>
                         <p class="detail__text-detail">Bánh kem là sản phẩm truyền thống, biểu tượng của sự sang trọng
@@ -135,7 +136,7 @@
                         </div>
                         <div class="card_area d-flex align-items-center">
                             <button class="btn " href="#">Mua ngay</button>
-                            <button class="icon_btn btn ms-3" href="#" id="cart" onclick="ShowModal()">Thêm vào giỏ <i
+                            <button class="icon_btn btn ms-3" href="#" id="cart" onclick="addProduct()">Thêm vào giỏ <i
                                     class="fa fa-shopping-bag"></i></button>
 
                         </div>
@@ -626,7 +627,7 @@
                         <i class="fa fa-trash" onclick="removeItem('${productId}')"></i>
                     </div>
                     <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                        <h4>$${item.price}</h4>
+                        <h4>${item.price}</h4>
                         <div class="quantity d-flex align-items-center mt-0 justify-content-between">
                             <i class="fa fa-minus" onclick="updateQuantity('${productId}', false)"></i>
                             <input type="text" value="${item.quantity}" class="text-center w-25 border-0" readonly>
@@ -685,11 +686,39 @@
     }
 
     const productId = getQueryParameter('productId');
-    const productName = getQueryParameter('productName')
     document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById("name").innerText = productName;
-    });
 
+        var listItems = JSON.parse(localStorage.getItem('listItems'));
+        console.log(listItems);
+        document.getElementById("name").innerText = listItems[productId].name;
+        document.getElementById("price").innerText = listItems[productId].price;
+        var productImg = document.getElementById("product-img");
+        productImg.setAttribute("src", listItems[productId].image)
+    });
+    // add a product
+
+    let addProduct = () => {
+
+        function addToCart() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+            var listItems = JSON.parse(localStorage.getItem('listItems'));
+            console.log(listItems);
+            let name = listItems[productId].name;
+            let price = listItems[productId].price;
+            let image = listItems[productId].image;
+
+            if (cartItems[productId]) {
+                cartItems[productId].quantity++;
+            } else {
+                cartItems[productId] = { name, price, image, quantity: 1 };
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        }
+        addToCart();
+        ShowModal();
+    }
 </script>
 
 </html>
