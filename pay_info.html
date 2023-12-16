@@ -112,7 +112,7 @@
                             <p>Đã có tài khoản ? <span class="text-danger">Đăng nhập</span></p>
                         </div>
                         <div class="col-12">
-                            <input type="email" placeholder="Email" class="form-control border-dark py-2">
+                            <input type="email" placeholder="Email" class="form-control border-dark py-2" id="payEmail">
                         </div>
 
                         <div class="col-12 mt-5">
@@ -120,27 +120,31 @@
                         </div>
 
                         <div class="col-6 mt-3">
-                            <input type="text" placeholder="Tên" class="form-control border-dark py-2">
+                            <input type="text" placeholder="Tên" class="form-control border-dark py-2 " id="payName">
                         </div>
 
                         <div class="col-6 mt-3">
-                            <input type="text" placeholder="Họ" class="form-control border-dark py-2">
+                            <input type="text" placeholder="Họ" class="form-control border-dark py-2" id="payFirstname">
                         </div>
 
                         <div class="col-12 my-3">
-                            <input type="text" placeholder="Địa chỉ giao hàng" class="form-control border-dark py-2">
+                            <input type="text" placeholder="Địa chỉ giao hàng" class="form-control border-dark py-2"
+                                id="payAddress">
                         </div>
 
                         <div class="col-6">
-                            <input type="text" placeholder="Thành phố" class="form-control border-dark py-2">
+                            <input type="text" placeholder="Thành phố" class="form-control border-dark py-2"
+                                id="payCity">
                         </div>
 
                         <div class="col-6">
-                            <input type="text" placeholder="Mã vùng" class="form-control border-dark py-2">
+                            <input type="text" placeholder="Mã vùng" class="form-control border-dark py-2"
+                                id="payRegion">
                         </div>
 
                         <div class="col-12 my-3">
-                            <input type="tel" placeholder="Số điện thoại" class="form-control border-dark py-2">
+                            <input type="tel" placeholder="Số điện thoại" class="form-control border-dark py-2"
+                                id="payTelephone">
                         </div>
 
                         <div class="col-12 mt-4">
@@ -188,7 +192,8 @@
 
 
                         <div class="col-12 text-center my-5">
-                            <button class="btn btn-warning rounded-pill px-5 border-dark">Thanh toán</button>
+                            <button class="btn btn-warning rounded-pill px-5 border-dark" id="payMent">Thanh
+                                toán</button>
                         </div>
                     </div>
                 </div>
@@ -484,6 +489,25 @@
             updateCart();
         }
     }
+
+    //check Pay Info
+    document.getElementById("payMent").addEventListener("click", function (event) {
+        event.preventDefault();
+        var email = document.getElementById("payEmail").value;
+        var name = document.getElementById("payName").value;
+        var firstName = document.getElementById("payFirstname").value;
+        var address = document.getElementById("payAddress").value;
+        var city = document.getElementById("payCity").value;
+        var region = document.getElementById("payRegion").value;
+        var phone = document.getElementById("payTelephone").value;
+
+        if (name === "" || email === "" || phone === "" || firstName === "" || address === "" || city === "" || region === "") {
+            alert("Vui lòng nhập đầy đủ thông tin!");
+            return;
+        }
+        alert("Thanh toán thành công!");
+        location.href = './menu.html'
+    });
 
 </script>
 
