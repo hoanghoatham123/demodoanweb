@@ -590,6 +590,10 @@ input:checked ~ .sale-tag {
     }
   }
 
+  .sock{
+    cursor: pointer;
+  }
+
 .contact__right{
     background-color: #FBEADF;
     border-radius: 8px;

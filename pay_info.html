@@ -199,62 +199,66 @@
                             <h2 class="fst-normal">Giỏ hàng của bạn <span class="text-danger">(3)</span> </h2>
                             <i class="fa fa-times-circle" id="hidemodal"></i>
                         </div>
-
-                        <div class="selection-item my-3">
-                            <div class="row">
-                                <div class="col-3"><img class="img-fluid" src="./img/mart/product-image1.png" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <div class="item-info d-flex justify-content-between align-items-center">
-                                        <h4>Bánh quy sô cô la kết hợp cùng hạnh nhân.</h4>
-                                        <i class="fa fa-trash"></i>
+                        <div class="list-cart">
+                            <div class="selection-item my-3">
+                                <div class="row">
+                                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image1.png"
+                                            alt="">
                                     </div>
-                                    <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                        <h4>$12.99</h4>
-                                        <div class="form-group ">
+                                    <div class="col-9">
+                                        <div class="item-info d-flex justify-content-between align-items-center">
+                                            <h4>Bánh quy sô cô la kết hợp cùng hạnh nhân.</h4>
+                                            <i class="fa fa-trash"></i>
+                                        </div>
+                                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                                            <h4>$12.99</h4>
+                                            <div class="form-group ">
 
-                                            <div
-                                                class="quantity d-flex align-items-center mt-0 justify-content-between">
+                                                <div
+                                                    class="quantity d-flex align-items-center mt-0 justify-content-between">
 
-                                                <i class="fa fa-minus"></i>
-                                                <input type="text" value="1" name="quantity" id=""
-                                                    class="text-center w-25 border-0">
-                                                <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-minus"></i>
+                                                    <input type="text" value="1" name="quantity" id=""
+                                                        class="text-center w-25 border-0">
+                                                    <i class="fa fa-plus"></i>
+                                                </div>
+
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="selection-item my-3">
+                                <div class="row">
+                                    <div class="col-3"><img class="img-fluid" src="./img/mart/product-image2.png"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="item-info d-flex justify-content-between align-items-center">
+                                            <h4>Bánh quy bơ đậu phộng kết hợp cùng socola chip.</h4>
+                                            <i class="fa fa-trash"></i>
+                                        </div>
+                                        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+                                            <h4>$11.05</h4>
+                                            <div class="form-group ">
+
+                                                <div
+                                                    class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                                                    <i class="fa fa-minus"></i>
+                                                    <input type="text" value="2" name="quantity" id=""
+                                                        class="text-center w-25 border-0">
+                                                    <i class="fa fa-plus"></i>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="selection-item my-3">
-                            <div class="row">
-                                <div class="col-3"><img class="img-fluid" src="./img/mart/product-image2.png" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <div class="item-info d-flex justify-content-between align-items-center">
-                                        <h4>Bánh quy bơ đậu phộng kết hợp cùng socola chip.</h4>
-                                        <i class="fa fa-trash"></i>
-                                    </div>
-                                    <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                        <h4>$11.05</h4>
-                                        <div class="form-group ">
-
-                                            <div
-                                                class="quantity d-flex align-items-center mt-0 justify-content-between">
-
-                                                <i class="fa fa-minus"></i>
-                                                <input type="text" value="2" name="quantity" id=""
-                                                    class="text-center w-25 border-0">
-                                                <i class="fa fa-plus"></i>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="discount-code selection-item mt-3">
                             <div class="d-flex">
@@ -266,7 +270,7 @@
                         <div class="total selection-item mt-3">
                             <div class="d-flex justify-content-between">
                                 <span>Tạm tính</span>
-                                <span>$35.09</span>
+                                <span class="tamtinh">$35.09</span>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <span>Phí ship</span>
@@ -396,9 +400,90 @@
         var modal = document.getElementById("modal-cart");
         modal.classList.remove("show");
     }
-    // document.getElementById("cart").addEventListener("click", ShowModal);
-    // document.getElementById("hidemodal").addEventListener("click", hidemodal);
 
+    //display cart
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCart();
+    });
+    function updateCart() {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+        let cartContainer = document.querySelector('.pay-info .container .list-cart');
+        let totalAmount = 0;
+        let totalQuantity = 0;
+        let price = 0;
+        cartContainer.querySelectorAll('.selection-item').forEach(e => e.remove());
+
+        for (const [productId, item] of Object.entries(cartItems)) {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'selection-item my-3';
+            itemElement.innerHTML = `
+                <div class="row">
+    <div class="col-3"><img class="img-fluid" src="${item.image}" alt=""></div>
+    <div class="col-9">
+        <div class="item-info d-flex justify-content-between align-items-center">
+            <h4>${item.name}</h4>
+            <i class="fa fa-trash" onclick="removeItem('${productId}')"></i>
+        </div>
+        <div class="item-pay d-flex justify-content-between align-items-center mt-4">
+            <h4>${item.price}</h4>
+            <div class="form-group ">
+
+                <div class="quantity d-flex align-items-center mt-0 justify-content-between">
+
+                    <i class="fa fa-minus" onclick="updateQuantity('${productId}', false)"></i>
+                    <input type="text" value="${item.quantity}" class="text-center w-25 border-0" readonly>
+                    <i class="fa fa-plus" onclick="updateQuantity('${productId}', true)"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+           
+        `;
+            cartContainer.insertBefore(itemElement, cartContainer.children[2]);
+            price = parseFloat((item.price).replace('$', '').replace(',', ''));
+            totalAmount += (price * (item.quantity));
+            totalQuantity += item.quantity;
+        }
+
+        document.querySelector('.pay-info .modal-head h2 span').textContent = `(${totalQuantity})`;
+        document.querySelector('.pay-info .total .tamtinh').textContent = `$${totalAmount.toFixed(2)}`;
+        totalAmount = totalAmount + 10.99;
+        var payTotal = totalAmount.toFixed(2);
+        document.querySelector('.pay-info .total p:last-child').textContent = `$${payTotal}`;
+    }
+
+
+    function updateQuantity(productId, isIncrement) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+
+        if (cartItems[productId]) {
+            if (isIncrement) {
+                cartItems[productId].quantity++;
+            } else {
+                if (cartItems[productId].quantity > 1) {
+                    cartItems[productId].quantity--;
+                } else {
+                    delete cartItems[productId];
+                }
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCart();
+        }
+    }
+
+    function removeItem(productId) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+
+        if (cartItems[productId]) {
+            delete cartItems[productId];
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCart();
+        }
+    }
 
 </script>
 
