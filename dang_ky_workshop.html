@@ -27,6 +27,18 @@
 </head>
 
 <body>
+  <div id="confirm-overlay">
+    <div class="position-relative d-flex flex-column" id="confirm-popup">
+      <button class="submit-btn" id="close-btn">X</button>
+      <h3 class="mb-4" id="confirm-header">Xác Nhận Thông Tin Đã Đăng Ký</h3>
+      <p id="confirm-name">Họ và Tên: </p>
+      <p id="confirm-tel">Số điện thoại: </p>
+      <p id="confirm-clasess">Các Workshop đã đăng ký:</p>
+      <div class="mb-4 d-flex flex-column gap-2" id="confirm-classes-list"></div>
+      <p id="confirm-group">Đăng ký nhóm trên 6 người.</p>
+      <button type="button" id="confirm-btn" class="submit-btn">XÁC NHẬN</button>
+    </div>
+  </div>
   <!-- HEADER -->
   <header class="container-fluid">
     <div class="container">
@@ -84,10 +96,15 @@
 
         <div class="p-4 col-lg-6 d-flex flex-col">
           <form class="w-100 d-flex flex-column justify-content-center gap-4" style="color:#de7174">
-            <div class="row align-items-center">
-              <div class="col d-flex flex-column">
-                <label for="name" class="pb-2 fw-bold fs-5">Họ và Tên</label>
-                <input type="text" id="name" class="p-2 rounded" style="border: 3px solid #de7174" />
+              <div class="row align-items-center">
+                  <div class="col d-flex flex-column">
+                      <label for="name" class="pb-2 fw-bold fs-5">Họ và Tên</label>
+                      <input type="text" id="name" class="p-2 rounded" style="border: 3px solid #de7174"/>
+                  </div>
+                  <div class="col d-flex flex-column">
+                      <label for="tel" class="pb-2 fw-bold fs-5">Số Điện Thoại</label>
+                      <input type="tel" id="tel" class="p-2 rounded" style="border: 3px solid #de7174" />
+                  </div>
               </div>
               <div class="col d-flex flex-column">
                 <label for="tel" class="pb-2 fw-bold fs-5">Số Điện Thoại</label>
@@ -102,16 +119,15 @@
             </div>
 
             <div>
-              <div class="pb-2 fw-bold fs-5">Bạn có nhu cầu đăng ký lớp riêng theo nhóm (từ 6 người trở lên)</div>
-              <div>
-                <input type="radio" id="is_group_yes" name="is_group" value="yes">
-                <label for="is_group_yes">Có</label><br>
-                <input type="radio" id="is_group_no" name="is_group" value="no" checked>
-                <label for="is_group_no">Không</label><br>
-              </div>
+              <div class="pb-2 fw-bold d-flex gap-2">
+                <input type="checkbox" id="is_group">
+                <label class="fs-6 flex-grow-1" for="is_group">
+                  Bạn có nhu cầu đăng ký lớp riêng theo nhóm (từ 6 người trở lên)
+                </label>
+                </div>
             </div>
 
-            <button type="button" class="submit-btn">XÁC NHẬN</button>
+            <button type="button" id="submit-btn" class="submit-btn">XÁC NHẬN</button>
 
           </form>
         </div>
@@ -120,7 +136,6 @@
     </div>
 
   </div>
-
   <!-- footer -->
 
   <footer>
@@ -214,41 +229,41 @@
       'title': 'Bánh Kem',
       'location': 'Linh Trung, Thủ Đức',
       'time': '14:00 - 17:00',
-      'date': 'Thứ 7, 07/05/2023'
+      'date': 'Thứ 7, 23/12/2023'
     },
     {
       'class_id': 'class_01',
       'title': 'Cookie',
       'location': 'Linh Trung, Thủ Đức',
       'time': '14:00 - 17:00',
-      'date': 'Thứ 7, 07/05/2023'
+      'date': 'Thứ 6, 22/12/2023'
     },
     {
       'class_id': 'class_02',
       'title': 'Cupcake',
       'location': 'Linh Trung, Thủ Đức',
       'time': '14:00 - 17:00',
-      'date': 'Thứ 7, 07/05/2023'
+      'date': 'Thứ 5, 21/12/2023'
     },
     {
       'class_id': 'class_03',
       'title': 'Bánh gỗ',
       'location': 'Linh Trung, Thủ Đức',
       'time': '14:00 - 17:00',
-      'date': 'Thứ 7, 07/05/2023'
+      'date': 'Thứ 4, 20/12/2023'
     },
     {
       'class_id': 'class_04',
       'title': 'Macaron',
       'location': 'Linh Trung, Thủ Đức',
-      'time': '14:00 - 17:00',
+      'time': '13:30 - 16:00',
       'date': 'Thứ 7, 07/05/2023'
     },
     {
       'class_id': 'class_05',
       'title': 'Mousse',
       'location': 'Linh Trung, Thủ Đức',
-      'time': '14:00 - 17:00',
+      'time': '08:00 - 11:00',
       'date': 'Thứ 7, 07/05/2023'
     },
   ]
@@ -284,6 +299,66 @@
     console.log(class_block)
     class_container.append(class_block)
   }
+
+  confirm_overlay = document.getElementById('confirm-overlay')
+  let confirm_popup = document.getElementById('confirm-popup')
+
+  let close_btn = document.getElementById('close-btn')
+  close_btn.addEventListener('click', (e) => {
+    confirm_overlay.style.display = "none";
+  })
+
+  let submit_btn = document.getElementById('submit-btn')
+  submit_btn.addEventListener('click', (e) => {
+
+    confirm_popup.children[2].innerHTML = 'Họ và Tên: ' + document.getElementById('name').value
+    confirm_popup.children[3].innerHTML = 'Số điện thoại: ' + document.getElementById('tel').value
+    confirm_popup.children[5].innerHTML = ''
+    confirm_popup.children[5].style.maxHeight = '40vh'
+    confirm_popup.children[5].style.overflow = 'scroll'
+    console.log(document.getElementById('is_group').checked)
+    if (!document.getElementById('is_group').checked)
+      confirm_popup.children[6].style.display = 'none'
+    else
+    confirm_popup.children[6].style.display = 'block'
+    confirm_popup.children[7].addEventListener('click', (e) => {
+      location.href = "/workshop.html"
+    })
+
+    for (let i = 0; i < class_infos.length; i++) {
+      let class_info = class_infos[i]
+      let class_block = document.getElementById(class_info['class_id'])
+      if (!class_block.checked) continue
+
+      let confirm_class_block = document.createElement("div")
+      confirm_class_block.setAttribute("class", "p-4 d-flex justify-content-between border border-danger-subtle rounded ")
+      confirm_class_block.innerHTML = `
+      <div class="d-flex gap-4">
+        <div>
+          <div class="fw-bold fs-5">${class_info['title']}</div>
+          <div class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width=24 height=24 viewBox="0 0 24 24"><path fill="currentColor" d="M12 19.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35Zm0 1.975q-.35 0-.7-.125t-.625-.375Q9.05 19.325 7.8 17.9t-2.087-2.762q-.838-1.338-1.275-2.575T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 1.125-.438 2.363t-1.275 2.575Q17.45 16.475 16.2 17.9t-2.875 2.925q-.275.25-.625.375t-.7.125ZM12 10Zm0 2q.825 0 1.413-.587T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Z"/></svg>
+            <div>${class_info['location']}</div>
+          </div>
+        </div>
+        </div>
+        <div>
+          <div class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width=24 height=24 viewBox="0 0 24 24"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8s-3.58 8-8 8zm.5-13H11v6l5.25 3.15l.75-1.23l-4.5-2.67z"/></svg>
+            <div>${class_info['time']}</div>
+          </div>
+          <div>${class_info['date']}</div>
+        </div>
+      </div>
+      `
+      confirm_popup.children[5].appendChild(confirm_class_block)
+    }
+
+    confirm_overlay.style.display = "flex";
+  })
+
+  console.log(confirm_popup.children)
+
 </script>
 
 </html>
