@@ -96,44 +96,44 @@
 
         <div class="p-4 col-lg-6 d-flex flex-col">
           <form class="w-100 d-flex flex-column justify-content-center gap-4" style="color:#de7174">
-              <div class="row align-items-center">
-                  <div class="col d-flex flex-column">
-                      <label for="name" class="pb-2 fw-bold fs-5">Họ và Tên</label>
-                      <input type="text" id="name" class="p-2 rounded" style="border: 3px solid #de7174"/>
-                  </div>
-                  <div class="col d-flex flex-column">
-                      <label for="tel" class="pb-2 fw-bold fs-5">Số Điện Thoại</label>
-                      <input type="tel" id="tel" class="p-2 rounded" style="border: 3px solid #de7174" />
-                  </div>
+            <div class="row align-items-center">
+              <div class="col d-flex flex-column">
+                <label for="name" class="pb-2 fw-bold fs-5">Họ và Tên</label>
+                <input type="text" id="name" class="p-2 rounded" style="border: 3px solid #de7174" />
               </div>
               <div class="col d-flex flex-column">
                 <label for="tel" class="pb-2 fw-bold fs-5">Số Điện Thoại</label>
                 <input type="tel" id="tel" class="p-2 rounded" style="border: 3px solid #de7174" />
               </div>
             </div>
-            <div>
-              <div class="pb-2 fw-bold fs-5">Lớp học bạn muốn tham gia</div>
-              <div id="class-container" class="p-3 d-flex flex-column overflow-scroll rounded gap-3"
-                style="height: 20rem; border: 3px solid #de7174;"> </div>
-
+            <div class="col d-flex flex-column">
+              <label for="tel" class="pb-2 fw-bold fs-5">Email</label>
+              <input type="tel" id="tel" class="p-2 rounded" style="border: 3px solid #de7174" />
             </div>
+        </div>
+        <div>
+          <div class="pb-2 fw-bold fs-5">Lớp học bạn muốn tham gia</div>
+          <div id="class-container" class="p-3 d-flex flex-column overflow-scroll rounded gap-3"
+            style="height: 20rem; border: 3px solid #de7174;"> </div>
 
-            <div>
-              <div class="pb-2 fw-bold d-flex gap-2">
-                <input type="checkbox" id="is_group">
-                <label class="fs-6 flex-grow-1" for="is_group">
-                  Bạn có nhu cầu đăng ký lớp riêng theo nhóm (từ 6 người trở lên)
-                </label>
-                </div>
-            </div>
-
-            <button type="button" id="submit-btn" class="submit-btn">XÁC NHẬN</button>
-
-          </form>
         </div>
 
+        <div>
+          <div class="pb-2 fw-bold d-flex gap-2">
+            <input type="checkbox" id="is_group">
+            <label class="fs-6 flex-grow-1" for="is_group">
+              Bạn có nhu cầu đăng ký lớp riêng theo nhóm (từ 6 người trở lên)
+            </label>
+          </div>
+        </div>
+
+        <button type="button" id="submit-btn" class="submit-btn">XÁC NHẬN</button>
+
+        </form>
       </div>
+
     </div>
+  </div>
 
   </div>
   <!-- footer -->
@@ -320,7 +320,7 @@
     if (!document.getElementById('is_group').checked)
       confirm_popup.children[6].style.display = 'none'
     else
-    confirm_popup.children[6].style.display = 'block'
+      confirm_popup.children[6].style.display = 'block'
     confirm_popup.children[7].addEventListener('click', (e) => {
       location.href = "/workshop.html"
     })
