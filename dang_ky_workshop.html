@@ -63,11 +63,11 @@
     </div>
   </header>
 
-  <div class="container-fluid" style="margin-top: 15rem; ">
+  <div class="container-fluid" style="margin-top: 10rem; ">
     <div class="container d-flex justify-content-between w-100" style="min-width: 80%; margin: 0 auto;">
 
       <div class="row align-items-stretch justify-content-between rounded" style="border: 3px solid #DE7174;">
-        <div class="p-4 col-lg-6 lh-lg" style="background-color:#fedadb; color: black;">
+        <div class="p-3 col-lg-6 lh-lg" style="background-color:#fedadb; color: black;">
           <span class="fs-5 fw-bold">💸 HỌC PHÍ</span><br>
           👉 Học phí: 399k/buổi (đã bao gồm chi phí nguyên liệu thực hành, tài liệu)<br>
           👉 Giảm 20% khi đi từ 2 người hoặc đăng ký 2 lớp<br>
@@ -94,40 +94,41 @@
           💁🏻 Chúng mình khuyến khích các bạn học viên đến trước 15 phút để chuẩn bị thật tốt cho buổi học nhé.e<br>
         </div>
 
-        <div class="p-4 col-lg-6 d-flex flex-col">
+        <div class="p-3 col-lg-6 d-flex flex-col">
           <form class="w-100 d-flex flex-column justify-content-center gap-4" style="color:#de7174">
-            <div class="row align-items-center">
-              <div class="col d-flex flex-column">
+            <div class="row justify-content-between">
+              <div class="col-lg-6 col-md-12 ">
                 <label for="name" class="pb-2 fw-bold fs-5">Họ và Tên</label>
-                <input type="text" id="name" class="p-2 rounded" style="border: 3px solid #de7174" />
+                <input type="text" id="name" class="form-control rounded" style="border: 3px solid #de7174" />
               </div>
-              <div class="col d-flex flex-column">
-                <label for="tel" class="pb-2 fw-bold fs-5">Số Điện Thoại</label>
-                <input type="tel" id="tel" class="p-2 rounded" style="border: 3px solid #de7174" />
+              <div class="col-lg-6 col-md-12  ">
+                <label for="tel" class="pb-2 fw-bold fs-5">Số điện thoại</label>
+                <input type="tel" id="tel" class="form-control rounded" style="border: 3px solid #de7174" />
+              </div>
+              <div class="col-12">
+
+                <div class="py-2 fw-bold fs-5">Lớp học bạn muốn tham gia</div>
+                <div id="class-container" class="p-3 d-flex flex-column overflow-scroll rounded gap-3"
+                  style=" border: 3px solid #de7174;"> </div>
+                <div>
+                  <div class="py-2 fw-bold d-flex gap-2">
+                    <input type="checkbox" id="is_group">
+                    <label class="fs-6 flex-grow-1" for="is_group">
+                      Bạn có nhu cầu đăng ký lớp riêng theo nhóm (từ 6 người trở lên)
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="button" id="submit-btn" class="submit-btn w-100">XÁC NHẬN</button>
+                </div>
+
               </div>
             </div>
-            <div class="col d-flex flex-column">
-              <label for="tel" class="pb-2 fw-bold fs-5">Email</label>
-              <input type="tel" id="tel" class="p-2 rounded" style="border: 3px solid #de7174" />
-            </div>
-        </div>
-        <div>
-          <div class="pb-2 fw-bold fs-5">Lớp học bạn muốn tham gia</div>
-          <div id="class-container" class="p-3 d-flex flex-column overflow-scroll rounded gap-3"
-            style="height: 20rem; border: 3px solid #de7174;"> </div>
+
+
+
 
         </div>
-
-        <div>
-          <div class="pb-2 fw-bold d-flex gap-2">
-            <input type="checkbox" id="is_group">
-            <label class="fs-6 flex-grow-1" for="is_group">
-              Bạn có nhu cầu đăng ký lớp riêng theo nhóm (từ 6 người trở lên)
-            </label>
-          </div>
-        </div>
-
-        <button type="button" id="submit-btn" class="submit-btn">XÁC NHẬN</button>
 
         </form>
       </div>
@@ -148,25 +149,25 @@
       </svg>
     </div>
     <div class="footer_bottom">
-      <div class="row w-100">
-        <div class="col-lg-5  responsive">
+      <div class="row w-100 mx-auto">
+        <div class="col-lg-4  responsive position-relative">
 
           <img src="./img/logo/logo-mau.png" alt="" />
 
         </div>
-        <div class="col-lg-3 col-md-12">
+        <div class="middle col-lg-4 col-md-12 d-flex flex-column justify-content-evenly align-items-center">
           <div class="content-top">
-            <p>Subscribe to the newsletter and be aware of promotions</p>
+            <p>Đăng ký nhận bản tin và nhận biết các chương trình khuyến mãi</p>
             <div class="subscribe d-flex justify-content-between">
               <input type="text" placeholder="Email">
-              <button class="btn btn-primary rounded-pill px-5">
+              <button class="btn btn-secondary rounded-pill px-5">
                 Gửi
               </button>
             </div>
           </div>
 
           <p class="text-bottom responsive">
-            2023 ©Macaronsmania. All Rights Reserved.
+            2023 ©Mặt trời nhỏ. Đã đăng ký bản quyền sử dụng.
           </p>
         </div>
         <div class="col-lg-4  col-md-12 px-0 ">

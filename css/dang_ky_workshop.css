@@ -54,6 +54,10 @@
     justify-content: center;
   }
 
+  #class-container{
+    height: 70vh;
+  }
+
   #confirm-header {
     font-size: 1.25rem;
   }
