@@ -164,7 +164,7 @@
                                 <i class="fa fa-trash"></i>
                             </div>
                             <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                <h4>$12.99</h4>
+                                <h4>79.000</h4>
                                 <div class="form-group ">
 
                                     <div class="quantity d-flex align-items-center mt-0 justify-content-between">
@@ -190,7 +190,7 @@
                                 <i class="fa fa-trash"></i>
                             </div>
                             <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                <h4>$11.05</h4>
+                                <h4>111.000</h4>
                                 <div class="form-group ">
 
                                     <div class="quantity d-flex align-items-center mt-0 justify-content-between">
@@ -220,7 +220,7 @@
                                 <i class="fa fa-trash"></i>
                             </div>
                             <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                <h4>$12.99</h4>
+                                <h4>120.000</h4>
                                 <button type="button" class="btn">Thêm</button>
                             </div>
                         </div>
@@ -229,10 +229,10 @@
             </div>
 
             <div class="pay-total  my-3
-            p-3">
+        p-3">
                 <div class="container total d-flex justify-content-between">
                     <p>Tổng cộng</p>
-                    <p>$35.09</p>
+                    <p>350.000</p>
                 </div>
                 <div class="pay d-flex justify-content-between">
                     <button class="btn" onclick="HideModal()">Tiếp tục xem bánh</button>
@@ -612,7 +612,7 @@
 
     }
 
-    //add-to-cart
+    //update-cart
     function updateCart() {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
         let cartContainer = document.querySelector('.modal-cart .container .list-cart');
@@ -644,7 +644,7 @@
             </div>
         `;
             cartContainer.insertBefore(itemElement, cartContainer.children[2]);
-            price = parseFloat((item.price).replace('$', '').replace(',', ''));
+            price = parseFloat(item.price);
             totalAmount += (price * (item.quantity));
             console.log(totalAmount);
             totalQuantity += item.quantity;
@@ -652,7 +652,7 @@
 
         document.querySelector('.modal-cart .modal-head h2 span').textContent = `(${totalQuantity})`;
         console.log(totalAmount);
-        var payTotal = totalAmount.toFixed(2);
+        var payTotal = totalAmount.toFixed(3);
         document.querySelector('.modal-cart .total p:last-child').textContent = `${payTotal}`;
     }
 

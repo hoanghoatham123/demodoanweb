@@ -247,8 +247,8 @@
                         <div class="product-details">
                             <h6>Bánh ngọt</h6>
                             <div class="price">
-                                <h6>$130.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>130.000</h6>
+                                <h6 class="l-through">210.000</h6>
                             </div>
                             <div class="prd-bottom d-flex">
                                 <button class="btn"><a href="detail.html?productId=product1">Mua
@@ -271,8 +271,8 @@
                         <div class="product-details">
                             <h6>Bánh Kem nhỏ</h6>
                             <div class="price">
-                                <h6>$199.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>199.000</h6>
+                                <h6 class="l-through">299.000</h6>
                             </div>
                             <div class="prd-bottom">
                                 <button class="btn"><a href="detail.html?productId=product2">Mua ngay</a></button>
@@ -295,8 +295,8 @@
                         <div class="product-details">
                             <h6>Bánh hương vani</h6>
                             <div class="price">
-                                <h6>$299.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>299.000</h6>
+                                <h6 class="l-through">$499.000</h6>
                             </div>
                             <div class="prd-bottom">
                                 <button class="btn"><a href="detail.html?productId=product3">Mua ngay</a></button>
@@ -319,8 +319,8 @@
                         <div class="product-details">
                             <h6>Bánh kem cắt sẵn</h6>
                             <div class="price">
-                                <h6>$99.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>99.000</h6>
+                                <h6 class="l-through">210.000</h6>
                             </div>
                             <div class="prd-bottom">
                                 <button class="btn"><a href="detail.html?productId=product4">Mua ngay</a></button>
@@ -341,10 +341,10 @@
                     <div class="single-product col-lg-4 col-md-6" data-product-id="product5">
                         <img class="img-fluid" src="./img/Rectangle 4510.png" alt="" />
                         <div class="product-details">
-                            <h6>Bánh ngọt</h6>
+                            <h6>Bánh kem trái cây</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>150.000</h6>
+                                <h6 class="l-through">410.000</h6>
                             </div>
                             <div class="prd-bottom">
                                 <button class="btn"><a href="detail.html?productId=product5">Mua ngay</a></button>
@@ -367,8 +367,8 @@
                         <div class="product-details">
                             <h6>Bánh kem mứt</h6>
                             <div class="price">
-                                <h6>$999.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>999.000</h6>
+                                <h6 class="l-through">1100.000</h6>
                             </div>
                             <div class="prd-bottom">
                                 <button class="btn"><a href="detail.html?productId=product6">Mua ngay</a></button>
@@ -539,7 +539,7 @@
                             <i class="fa fa-trash"></i>
                         </div>
                         <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                            <h4>$12.99</h4>
+                            <h4>79.000</h4>
                             <div class="form-group ">
 
                                 <div class="quantity d-flex align-items-center mt-0 justify-content-between">
@@ -565,7 +565,7 @@
                             <i class="fa fa-trash"></i>
                         </div>
                         <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                            <h4>$11.05</h4>
+                            <h4>111.000</h4>
                             <div class="form-group ">
 
                                 <div class="quantity d-flex align-items-center mt-0 justify-content-between">
@@ -595,7 +595,7 @@
                             <i class="fa fa-trash"></i>
                         </div>
                         <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                            <h4>$12.99</h4>
+                            <h4>120.000</h4>
                             <button type="button" class="btn">Thêm</button>
                         </div>
                     </div>
@@ -607,7 +607,7 @@
         p-3">
             <div class="container total d-flex justify-content-between">
                 <p>Tổng cộng</p>
-                <p>$35.09</p>
+                <p>350.000</p>
             </div>
             <div class="pay d-flex justify-content-between">
                 <button class="btn" onclick="HideModal()">Tiếp tục xem bánh</button>
@@ -658,7 +658,7 @@
 
     function extractPrice(productElement) {
         let priceText = productElement.querySelector('.price h6').textContent;
-        return parseFloat(priceText.replace('$', '').replace(',', ''));
+        return priceText;
     }
 
     //search-product
@@ -768,7 +768,7 @@
             </div>
         `;
             cartContainer.insertBefore(itemElement, cartContainer.children[2]);
-            price = parseFloat((item.price).replace('$', '').replace(',', ''));
+            price = parseFloat(item.price);
             totalAmount += (price * (item.quantity));
             console.log(totalAmount);
             totalQuantity += item.quantity;
@@ -776,7 +776,7 @@
 
         document.querySelector('.modal-cart .modal-head h2 span').textContent = `(${totalQuantity})`;
         console.log(totalAmount);
-        var payTotal = totalAmount.toFixed(2);
+        var payTotal = totalAmount.toFixed(3);
         document.querySelector('.modal-cart .total p:last-child').textContent = `${payTotal}`;
     }
 

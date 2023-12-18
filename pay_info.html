@@ -216,7 +216,7 @@
                                             <i class="fa fa-trash"></i>
                                         </div>
                                         <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                            <h4>$12.99</h4>
+                                            <h4>12.999</h4>
                                             <div class="form-group ">
 
                                                 <div
@@ -245,7 +245,7 @@
                                             <i class="fa fa-trash"></i>
                                         </div>
                                         <div class="item-pay d-flex justify-content-between align-items-center mt-4">
-                                            <h4>$11.05</h4>
+                                            <h4>110.000</h4>
                                             <div class="form-group ">
 
                                                 <div
@@ -275,18 +275,18 @@
                         <div class="total selection-item mt-3">
                             <div class="d-flex justify-content-between">
                                 <span>Tạm tính</span>
-                                <span class="tamtinh">$35.09</span>
+                                <span class="tamtinh">350.000</span>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <span>Phí ship</span>
-                                <span>$10.99</span>
+                                <span>10.999</span>
                             </div>
                         </div>
 
                         <div class="pay-total  my-3">
                             <div class="container total d-flex justify-content-between px-0">
                                 <p>Tổng cộng</p>
-                                <p>$46.08</p>
+                                <p>46.08</p>
                             </div>
 
                             <div class="pay text-center">
@@ -448,16 +448,16 @@
            
         `;
             cartContainer.insertBefore(itemElement, cartContainer.children[2]);
-            price = parseFloat((item.price).replace('$', '').replace(',', ''));
+            price = parseFloat((item.price));
             totalAmount += (price * (item.quantity));
             totalQuantity += item.quantity;
         }
 
         document.querySelector('.pay-info .modal-head h2 span').textContent = `(${totalQuantity})`;
-        document.querySelector('.pay-info .total .tamtinh').textContent = `$${totalAmount.toFixed(2)}`;
-        totalAmount = totalAmount + 10.99;
-        var payTotal = totalAmount.toFixed(2);
-        document.querySelector('.pay-info .total p:last-child').textContent = `$${payTotal}`;
+        document.querySelector('.pay-info .total .tamtinh').textContent = `${totalAmount.toFixed(3)}`;
+        totalAmount = totalAmount + 10.999;
+        var payTotal = totalAmount.toFixed(3);
+        document.querySelector('.pay-info .total p:last-child').textContent = `${payTotal}`;
     }
 
 
